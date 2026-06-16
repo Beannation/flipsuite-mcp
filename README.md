@@ -29,6 +29,27 @@ for how the write/destructive tools behave.
 > not edited. Treasury writes (`send_tip`, `transfer_asset`, `create_airdrop`, `create_raffle`,
 > `burn_asset`) and `update_points_balance` change real assets/balances — read the safety doc.
 
+## Asset-moving tools — where they work
+
+Five tools move or destroy real on-chain assets: `send_tip`, `transfer_asset`,
+`create_airdrop`, `create_raffle`, and `burn_asset`. The server exposes them like any other
+tool, but **whether the assistant will actually call them depends on the client's safety
+policy**, not on this server.
+
+- **Claude Code** — executes the asset tools after showing a confirmation prompt. This is the
+  smoothest place to run them in plain language ("tip user `<id>` 1 TOKEN on Cronos in
+  channel `<id>`").
+- **Claude Cowork** — by design, the assistant **declines to execute on-chain asset transfers
+  even when you confirm**. The read tools, `create_quest`, and points lookups work
+  conversationally as expected, but for the five asset tools the assistant will hand the action
+  back to you rather than send it.
+- **Direct (no assistant)** — the underlying actions are ordinary FlipSuite features; you can
+  always perform them in the FlipSuite Discord bot or dashboard.
+
+In short: reads, quests, and lookups are frictionless everywhere; the treasury writes are best
+run from Claude Code or the FlipSuite app, and you (not the assistant) remain the operator for
+anything that moves funds. See **[docs/SAFETY.md](docs/SAFETY.md)** for the full breakdown.
+
 ## Requirements
 
 - **Node.js 18+** ([nodejs.org](https://nodejs.org) — install the LTS build)
@@ -82,12 +103,16 @@ Fully quit and relaunch Claude Desktop afterwards.
 
 ### Claude Cowork
 
-Either **Settings → Developer → add a local MCP server** (command `node`, argument the
-absolute path to `dist/index.js`, env var `FLIPSUITE_API_KEY`), then start a new chat — or
-install it as a plugin from the Plugins settings page.
+Cowork runs inside Claude Desktop, so use the same config file. Go to **Settings → Developer →
+Edit Config**, which opens `claude_desktop_config.json` (creating it if it doesn't exist), and
+add the same `mcpServers` block shown above under **Claude Desktop**. There is no separate
+"add a local MCP server" form — you edit the JSON directly. Save, fully quit and relaunch, then
+start a **new chat** (tools load when a chat starts). Alternatively, install it as a plugin from
+the Plugins settings page.
 
-> On managed/work accounts an admin may have disabled user-added local MCP servers. If you
-> can't add one, use a personal account or ask your admin to deploy it as an organization plugin.
+> On managed/work accounts an admin may have disabled user-added local MCP servers. If the
+> Developer config is locked or the server's tools never appear, use a personal account or ask
+> your admin to deploy it as an organization plugin.
 
 ### As a plugin (Cowork & Claude Code)
 

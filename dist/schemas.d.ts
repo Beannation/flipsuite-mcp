@@ -10,14 +10,14 @@ export declare const QuestTask: z.ZodDiscriminatedUnion<"type", [z.ZodObject<{
     description: z.ZodString;
     endpoint: z.ZodString;
     userIdMethods: z.ZodArray<z.ZodEnum<["discord", "twitter", "wallets"]>, "many">;
-    walletChains: z.ZodOptional<z.ZodNullable<z.ZodArray<z.ZodEnum<["Abstract", "ApeChain", "Arbitrum", "Atto", "Avalanche", "Base", "Berachain", "Blast", "BSC", "CosmosHub", "Cronos", "Ethereum", "Harmony", "HyperCore", "HyperEvm", "Initia", "Injective", "Intergaze", "Linea", "Mitosis", "Nano", "Nibiru", "Optimism", "Osmosis", "Plasma", "Polygon", "SEDA", "Sei", "SeiEvm", "Solana", "Somnia", "Sonic", "Stargaze", "Terra", "Unichain", "Yominet", "Zaar", "zkCronos"]>, "many">>>;
+    walletChains: z.ZodOptional<z.ZodNullable<z.ZodArray<z.ZodEnum<["Abstract", "ApeChain", "Arbitrum", "Atto", "Avalanche", "Base", "Berachain", "Blast", "BSC", "CosmosHub", "Cronos", "Ethereum", "Harmony", "HyperCore", "HyperEvm", "Initia", "Injective", "Linea", "Mitosis", "Nano", "Nibiru", "Optimism", "Osmosis", "Pepecoin", "Plasma", "Polygon", "SEDA", "Sei", "SeiEvm", "Solana", "Somnia", "Sonic", "Stargaze", "Terra", "Unichain", "Yominet", "zkCronos"]>, "many">>>;
 }, "strip", z.ZodTypeAny, {
     type: "API";
     name: string;
     description: string;
     endpoint: string;
     userIdMethods: ("discord" | "twitter" | "wallets")[];
-    walletChains?: ("Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Intergaze" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "Zaar" | "zkCronos")[] | null | undefined;
+    walletChains?: ("Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Pepecoin" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "zkCronos")[] | null | undefined;
     isOptional?: boolean | null | undefined;
     isReviewRequired?: boolean | null | undefined;
     skipsReview?: boolean | null | undefined;
@@ -29,7 +29,7 @@ export declare const QuestTask: z.ZodDiscriminatedUnion<"type", [z.ZodObject<{
     description: string;
     endpoint: string;
     userIdMethods: ("discord" | "twitter" | "wallets")[];
-    walletChains?: ("Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Intergaze" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "Zaar" | "zkCronos")[] | null | undefined;
+    walletChains?: ("Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Pepecoin" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "zkCronos")[] | null | undefined;
     isOptional?: boolean | null | undefined;
     isReviewRequired?: boolean | null | undefined;
     skipsReview?: boolean | null | undefined;
@@ -153,7 +153,7 @@ export declare const QuestTask: z.ZodDiscriminatedUnion<"type", [z.ZodObject<{
     rewardBoost: z.ZodOptional<z.ZodNullable<z.ZodNumber>>;
     rewardBoostMode: z.ZodOptional<z.ZodNullable<z.ZodEnum<["MAX", "CUMULATIVE", "GLOBAL"]>>>;
     type: z.ZodLiteral<"NFT_BALANCE">;
-    chain: z.ZodEnum<["Abstract", "ApeChain", "Arbitrum", "Atto", "Avalanche", "Base", "Berachain", "Blast", "BSC", "CosmosHub", "Cronos", "Ethereum", "Harmony", "HyperCore", "HyperEvm", "Initia", "Injective", "Intergaze", "Linea", "Mitosis", "Nano", "Nibiru", "Optimism", "Osmosis", "Plasma", "Polygon", "SEDA", "Sei", "SeiEvm", "Solana", "Somnia", "Sonic", "Stargaze", "Terra", "Unichain", "Yominet", "Zaar", "zkCronos"]>;
+    chain: z.ZodEnum<["Abstract", "ApeChain", "Arbitrum", "Atto", "Avalanche", "Base", "Berachain", "Blast", "BSC", "CosmosHub", "Cronos", "Ethereum", "Harmony", "HyperCore", "HyperEvm", "Initia", "Injective", "Linea", "Mitosis", "Nano", "Nibiru", "Optimism", "Osmosis", "Pepecoin", "Plasma", "Polygon", "SEDA", "Sei", "SeiEvm", "Solana", "Somnia", "Sonic", "Stargaze", "Terra", "Unichain", "Yominet", "zkCronos"]>;
     contractAddress: z.ZodString;
     collectionName: z.ZodString;
     standard: z.ZodEnum<["CW_721", "ERC-721", "ERC-1155", "METAPLEX", "METAPLEX_CNFT", "METAPLEX_CORE", "SG_BADGE", "UNKNOWN"]>;
@@ -177,7 +177,7 @@ export declare const QuestTask: z.ZodDiscriminatedUnion<"type", [z.ZodObject<{
     includeStakingContractsExclusively: z.ZodOptional<z.ZodNullable<z.ZodBoolean>>;
 }, "strip", z.ZodTypeAny, {
     type: "NFT_BALANCE";
-    chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Intergaze" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "Zaar" | "zkCronos";
+    chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Pepecoin" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "zkCronos";
     contractAddress: string;
     collectionName: string;
     standard: "CW_721" | "ERC-721" | "ERC-1155" | "METAPLEX" | "METAPLEX_CNFT" | "METAPLEX_CORE" | "SG_BADGE" | "UNKNOWN";
@@ -200,7 +200,7 @@ export declare const QuestTask: z.ZodDiscriminatedUnion<"type", [z.ZodObject<{
     includeStakingContractsExclusively?: boolean | null | undefined;
 }, {
     type: "NFT_BALANCE";
-    chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Intergaze" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "Zaar" | "zkCronos";
+    chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Pepecoin" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "zkCronos";
     contractAddress: string;
     collectionName: string;
     standard: "CW_721" | "ERC-721" | "ERC-1155" | "METAPLEX" | "METAPLEX_CNFT" | "METAPLEX_CORE" | "SG_BADGE" | "UNKNOWN";
@@ -386,7 +386,7 @@ export declare const QuestTask: z.ZodDiscriminatedUnion<"type", [z.ZodObject<{
     rewardBoost: z.ZodOptional<z.ZodNullable<z.ZodNumber>>;
     rewardBoostMode: z.ZodOptional<z.ZodNullable<z.ZodEnum<["MAX", "CUMULATIVE", "GLOBAL"]>>>;
     type: z.ZodLiteral<"TOKEN_SWAP">;
-    chain: z.ZodOptional<z.ZodNullable<z.ZodEnum<["Abstract", "ApeChain", "Arbitrum", "Atto", "Avalanche", "Base", "Berachain", "Blast", "BSC", "CosmosHub", "Cronos", "Ethereum", "Harmony", "HyperCore", "HyperEvm", "Initia", "Injective", "Intergaze", "Linea", "Mitosis", "Nano", "Nibiru", "Optimism", "Osmosis", "Plasma", "Polygon", "SEDA", "Sei", "SeiEvm", "Solana", "Somnia", "Sonic", "Stargaze", "Terra", "Unichain", "Yominet", "Zaar", "zkCronos"]>>>;
+    chain: z.ZodOptional<z.ZodNullable<z.ZodEnum<["Abstract", "ApeChain", "Arbitrum", "Atto", "Avalanche", "Base", "Berachain", "Blast", "BSC", "CosmosHub", "Cronos", "Ethereum", "Harmony", "HyperCore", "HyperEvm", "Initia", "Injective", "Linea", "Mitosis", "Nano", "Nibiru", "Optimism", "Osmosis", "Pepecoin", "Plasma", "Polygon", "SEDA", "Sei", "SeiEvm", "Solana", "Somnia", "Sonic", "Stargaze", "Terra", "Unichain", "Yominet", "zkCronos"]>>>;
     tokenAddress: z.ZodOptional<z.ZodNullable<z.ZodString>>;
     minAmount: z.ZodNumber;
     amountUnit: z.ZodEnum<["absolute", "dollar"]>;
@@ -401,7 +401,7 @@ export declare const QuestTask: z.ZodDiscriminatedUnion<"type", [z.ZodObject<{
     skipsReview?: boolean | null | undefined;
     rewardBoost?: number | null | undefined;
     rewardBoostMode?: "MAX" | "CUMULATIVE" | "GLOBAL" | null | undefined;
-    chain?: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Intergaze" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "Zaar" | "zkCronos" | null | undefined;
+    chain?: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Pepecoin" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "zkCronos" | null | undefined;
     lookbackWindowDays?: number | null | undefined;
     tokenAddress?: string | null | undefined;
     allowedPlatforms?: ("COWSWAP" | "FLIPSUITE" | "GAS_ZIP" | "HYPERLIQUID" | "JUPITER" | "LI_FI" | "LIQUID_SWAP" | "OBSIDIAN" | "OKU_TRADE" | "ORBITER" | "RELAY" | "ROCKETX" | "SOLANA" | "SOMNEX" | "SKIP_GO" | "SQUID" | "STARGATE" | "SUSHI_SWAP" | "WOLFSWAP" | "VVS")[] | null | undefined;
@@ -414,7 +414,7 @@ export declare const QuestTask: z.ZodDiscriminatedUnion<"type", [z.ZodObject<{
     skipsReview?: boolean | null | undefined;
     rewardBoost?: number | null | undefined;
     rewardBoostMode?: "MAX" | "CUMULATIVE" | "GLOBAL" | null | undefined;
-    chain?: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Intergaze" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "Zaar" | "zkCronos" | null | undefined;
+    chain?: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Pepecoin" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "zkCronos" | null | undefined;
     lookbackWindowDays?: number | null | undefined;
     tokenAddress?: string | null | undefined;
     allowedPlatforms?: ("COWSWAP" | "FLIPSUITE" | "GAS_ZIP" | "HYPERLIQUID" | "JUPITER" | "LI_FI" | "LIQUID_SWAP" | "OBSIDIAN" | "OKU_TRADE" | "ORBITER" | "RELAY" | "ROCKETX" | "SOLANA" | "SOMNEX" | "SKIP_GO" | "SQUID" | "STARGATE" | "SUSHI_SWAP" | "WOLFSWAP" | "VVS")[] | null | undefined;
@@ -461,7 +461,7 @@ export declare const QuestTask: z.ZodDiscriminatedUnion<"type", [z.ZodObject<{
     rewardBoost: z.ZodOptional<z.ZodNullable<z.ZodNumber>>;
     rewardBoostMode: z.ZodOptional<z.ZodNullable<z.ZodEnum<["MAX", "CUMULATIVE", "GLOBAL"]>>>;
     type: z.ZodLiteral<"TOKEN_TIP">;
-    chain: z.ZodOptional<z.ZodNullable<z.ZodEnum<["Abstract", "ApeChain", "Arbitrum", "Atto", "Avalanche", "Base", "Berachain", "Blast", "BSC", "CosmosHub", "Cronos", "Ethereum", "Harmony", "HyperCore", "HyperEvm", "Initia", "Injective", "Intergaze", "Linea", "Mitosis", "Nano", "Nibiru", "Optimism", "Osmosis", "Plasma", "Polygon", "SEDA", "Sei", "SeiEvm", "Solana", "Somnia", "Sonic", "Stargaze", "Terra", "Unichain", "Yominet", "Zaar", "zkCronos"]>>>;
+    chain: z.ZodOptional<z.ZodNullable<z.ZodEnum<["Abstract", "ApeChain", "Arbitrum", "Atto", "Avalanche", "Base", "Berachain", "Blast", "BSC", "CosmosHub", "Cronos", "Ethereum", "Harmony", "HyperCore", "HyperEvm", "Initia", "Injective", "Linea", "Mitosis", "Nano", "Nibiru", "Optimism", "Osmosis", "Pepecoin", "Plasma", "Polygon", "SEDA", "Sei", "SeiEvm", "Solana", "Somnia", "Sonic", "Stargaze", "Terra", "Unichain", "Yominet", "zkCronos"]>>>;
     tokenAddress: z.ZodOptional<z.ZodNullable<z.ZodString>>;
     minAmount: z.ZodNumber;
     amountUnit: z.ZodEnum<["absolute", "dollar"]>;
@@ -476,7 +476,7 @@ export declare const QuestTask: z.ZodDiscriminatedUnion<"type", [z.ZodObject<{
     skipsReview?: boolean | null | undefined;
     rewardBoost?: number | null | undefined;
     rewardBoostMode?: "MAX" | "CUMULATIVE" | "GLOBAL" | null | undefined;
-    chain?: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Intergaze" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "Zaar" | "zkCronos" | null | undefined;
+    chain?: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Pepecoin" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "zkCronos" | null | undefined;
     lookbackWindowDays?: number | null | undefined;
     tokenAddress?: string | null | undefined;
     excludedActions?: ("tip" | "airdrop" | "raffle")[] | null | undefined;
@@ -489,7 +489,7 @@ export declare const QuestTask: z.ZodDiscriminatedUnion<"type", [z.ZodObject<{
     skipsReview?: boolean | null | undefined;
     rewardBoost?: number | null | undefined;
     rewardBoostMode?: "MAX" | "CUMULATIVE" | "GLOBAL" | null | undefined;
-    chain?: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Intergaze" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "Zaar" | "zkCronos" | null | undefined;
+    chain?: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Pepecoin" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "zkCronos" | null | undefined;
     lookbackWindowDays?: number | null | undefined;
     tokenAddress?: string | null | undefined;
     excludedActions?: ("tip" | "airdrop" | "raffle")[] | null | undefined;
@@ -500,7 +500,7 @@ export declare const QuestTask: z.ZodDiscriminatedUnion<"type", [z.ZodObject<{
     rewardBoost: z.ZodOptional<z.ZodNullable<z.ZodNumber>>;
     rewardBoostMode: z.ZodOptional<z.ZodNullable<z.ZodEnum<["MAX", "CUMULATIVE", "GLOBAL"]>>>;
     type: z.ZodLiteral<"TOKEN_BALANCE">;
-    chain: z.ZodEnum<["Abstract", "ApeChain", "Arbitrum", "Atto", "Avalanche", "Base", "Berachain", "Blast", "BSC", "CosmosHub", "Cronos", "Ethereum", "Harmony", "HyperCore", "HyperEvm", "Initia", "Injective", "Intergaze", "Linea", "Mitosis", "Nano", "Nibiru", "Optimism", "Osmosis", "Plasma", "Polygon", "SEDA", "Sei", "SeiEvm", "Solana", "Somnia", "Sonic", "Stargaze", "Terra", "Unichain", "Yominet", "Zaar", "zkCronos"]>;
+    chain: z.ZodEnum<["Abstract", "ApeChain", "Arbitrum", "Atto", "Avalanche", "Base", "Berachain", "Blast", "BSC", "CosmosHub", "Cronos", "Ethereum", "Harmony", "HyperCore", "HyperEvm", "Initia", "Injective", "Linea", "Mitosis", "Nano", "Nibiru", "Optimism", "Osmosis", "Pepecoin", "Plasma", "Polygon", "SEDA", "Sei", "SeiEvm", "Solana", "Somnia", "Sonic", "Stargaze", "Terra", "Unichain", "Yominet", "zkCronos"]>;
     tokenAddress: z.ZodOptional<z.ZodNullable<z.ZodString>>;
     minAmount: z.ZodOptional<z.ZodNullable<z.ZodNumber>>;
     maxAmount: z.ZodOptional<z.ZodNullable<z.ZodNumber>>;
@@ -511,7 +511,7 @@ export declare const QuestTask: z.ZodDiscriminatedUnion<"type", [z.ZodObject<{
     includeStakingContractsExclusively: z.ZodOptional<z.ZodNullable<z.ZodBoolean>>;
 }, "strip", z.ZodTypeAny, {
     type: "TOKEN_BALANCE";
-    chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Intergaze" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "Zaar" | "zkCronos";
+    chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Pepecoin" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "zkCronos";
     amountUnit: "absolute" | "dollar";
     isOptional?: boolean | null | undefined;
     isReviewRequired?: boolean | null | undefined;
@@ -527,7 +527,7 @@ export declare const QuestTask: z.ZodDiscriminatedUnion<"type", [z.ZodObject<{
     tokenAddress?: string | null | undefined;
 }, {
     type: "TOKEN_BALANCE";
-    chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Intergaze" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "Zaar" | "zkCronos";
+    chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Pepecoin" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "zkCronos";
     amountUnit: "absolute" | "dollar";
     isOptional?: boolean | null | undefined;
     isReviewRequired?: boolean | null | undefined;
@@ -763,12 +763,12 @@ export declare const QuestTask: z.ZodDiscriminatedUnion<"type", [z.ZodObject<{
     type: z.ZodLiteral<"WALLET_INPUT">;
     label: z.ZodString;
     description: z.ZodString;
-    chains: z.ZodArray<z.ZodEnum<["Abstract", "ApeChain", "Arbitrum", "Atto", "Avalanche", "Base", "Berachain", "Blast", "BSC", "CosmosHub", "Cronos", "Ethereum", "Harmony", "HyperCore", "HyperEvm", "Initia", "Injective", "Intergaze", "Linea", "Mitosis", "Nano", "Nibiru", "Optimism", "Osmosis", "Plasma", "Polygon", "SEDA", "Sei", "SeiEvm", "Solana", "Somnia", "Sonic", "Stargaze", "Terra", "Unichain", "Yominet", "Zaar", "zkCronos"]>, "many">;
+    chains: z.ZodArray<z.ZodEnum<["Abstract", "ApeChain", "Arbitrum", "Atto", "Avalanche", "Base", "Berachain", "Blast", "BSC", "CosmosHub", "Cronos", "Ethereum", "Harmony", "HyperCore", "HyperEvm", "Initia", "Injective", "Linea", "Mitosis", "Nano", "Nibiru", "Optimism", "Osmosis", "Pepecoin", "Plasma", "Polygon", "SEDA", "Sei", "SeiEvm", "Solana", "Somnia", "Sonic", "Stargaze", "Terra", "Unichain", "Yominet", "zkCronos"]>, "many">;
 }, "strip", z.ZodTypeAny, {
     type: "WALLET_INPUT";
     description: string;
     label: string;
-    chains: ("Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Intergaze" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "Zaar" | "zkCronos")[];
+    chains: ("Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Pepecoin" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "zkCronos")[];
     isOptional?: boolean | null | undefined;
     isReviewRequired?: boolean | null | undefined;
     skipsReview?: boolean | null | undefined;
@@ -778,7 +778,7 @@ export declare const QuestTask: z.ZodDiscriminatedUnion<"type", [z.ZodObject<{
     type: "WALLET_INPUT";
     description: string;
     label: string;
-    chains: ("Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Intergaze" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "Zaar" | "zkCronos")[];
+    chains: ("Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Pepecoin" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "zkCronos")[];
     isOptional?: boolean | null | undefined;
     isReviewRequired?: boolean | null | undefined;
     skipsReview?: boolean | null | undefined;
@@ -800,38 +800,38 @@ export declare const pointsItem: z.ZodObject<{
 }>;
 export declare const tokenItem: z.ZodObject<{
     type: z.ZodLiteral<"TOKEN">;
-    chain: z.ZodEnum<["Abstract", "ApeChain", "Arbitrum", "Atto", "Avalanche", "Base", "Berachain", "Blast", "BSC", "CosmosHub", "Cronos", "Ethereum", "Harmony", "HyperCore", "HyperEvm", "Initia", "Injective", "Intergaze", "Linea", "Mitosis", "Nano", "Nibiru", "Optimism", "Osmosis", "Plasma", "Polygon", "SEDA", "Sei", "SeiEvm", "Solana", "Somnia", "Sonic", "Stargaze", "Terra", "Unichain", "Yominet", "Zaar", "zkCronos"]>;
+    chain: z.ZodEnum<["Abstract", "ApeChain", "Arbitrum", "Atto", "Avalanche", "Base", "Berachain", "Blast", "BSC", "CosmosHub", "Cronos", "Ethereum", "Harmony", "HyperCore", "HyperEvm", "Initia", "Injective", "Linea", "Mitosis", "Nano", "Nibiru", "Optimism", "Osmosis", "Pepecoin", "Plasma", "Polygon", "SEDA", "Sei", "SeiEvm", "Solana", "Somnia", "Sonic", "Stargaze", "Terra", "Unichain", "Yominet", "zkCronos"]>;
     tokenAddress: z.ZodOptional<z.ZodNullable<z.ZodString>>;
     amount: z.ZodNumber;
     amountUnit: z.ZodOptional<z.ZodNullable<z.ZodEnum<["absolute", "dollar"]>>>;
 }, "strip", z.ZodTypeAny, {
     type: "TOKEN";
-    chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Intergaze" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "Zaar" | "zkCronos";
+    chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Pepecoin" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "zkCronos";
     amount: number;
     tokenAddress?: string | null | undefined;
     amountUnit?: "absolute" | "dollar" | null | undefined;
 }, {
     type: "TOKEN";
-    chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Intergaze" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "Zaar" | "zkCronos";
+    chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Pepecoin" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "zkCronos";
     amount: number;
     tokenAddress?: string | null | undefined;
     amountUnit?: "absolute" | "dollar" | null | undefined;
 }>;
 export declare const nftItem: z.ZodObject<{
     type: z.ZodLiteral<"NFT">;
-    chain: z.ZodEnum<["Abstract", "ApeChain", "Arbitrum", "Atto", "Avalanche", "Base", "Berachain", "Blast", "BSC", "CosmosHub", "Cronos", "Ethereum", "Harmony", "HyperCore", "HyperEvm", "Initia", "Injective", "Intergaze", "Linea", "Mitosis", "Nano", "Nibiru", "Optimism", "Osmosis", "Plasma", "Polygon", "SEDA", "Sei", "SeiEvm", "Solana", "Somnia", "Sonic", "Stargaze", "Terra", "Unichain", "Yominet", "Zaar", "zkCronos"]>;
+    chain: z.ZodEnum<["Abstract", "ApeChain", "Arbitrum", "Atto", "Avalanche", "Base", "Berachain", "Blast", "BSC", "CosmosHub", "Cronos", "Ethereum", "Harmony", "HyperCore", "HyperEvm", "Initia", "Injective", "Linea", "Mitosis", "Nano", "Nibiru", "Optimism", "Osmosis", "Pepecoin", "Plasma", "Polygon", "SEDA", "Sei", "SeiEvm", "Solana", "Somnia", "Sonic", "Stargaze", "Terra", "Unichain", "Yominet", "zkCronos"]>;
     tokenAddress: z.ZodOptional<z.ZodNullable<z.ZodString>>;
     tokenId: z.ZodString;
     amount: z.ZodOptional<z.ZodNullable<z.ZodNumber>>;
 }, "strip", z.ZodTypeAny, {
     type: "NFT";
-    chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Intergaze" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "Zaar" | "zkCronos";
+    chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Pepecoin" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "zkCronos";
     tokenId: string;
     tokenAddress?: string | null | undefined;
     amount?: number | null | undefined;
 }, {
     type: "NFT";
-    chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Intergaze" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "Zaar" | "zkCronos";
+    chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Pepecoin" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "zkCronos";
     tokenId: string;
     tokenAddress?: string | null | undefined;
     amount?: number | null | undefined;
@@ -890,37 +890,37 @@ export declare const QuestReward: z.ZodDiscriminatedUnion<"type", [z.ZodObject<{
         amount: number;
     }>, z.ZodObject<{
         type: z.ZodLiteral<"TOKEN">;
-        chain: z.ZodEnum<["Abstract", "ApeChain", "Arbitrum", "Atto", "Avalanche", "Base", "Berachain", "Blast", "BSC", "CosmosHub", "Cronos", "Ethereum", "Harmony", "HyperCore", "HyperEvm", "Initia", "Injective", "Intergaze", "Linea", "Mitosis", "Nano", "Nibiru", "Optimism", "Osmosis", "Plasma", "Polygon", "SEDA", "Sei", "SeiEvm", "Solana", "Somnia", "Sonic", "Stargaze", "Terra", "Unichain", "Yominet", "Zaar", "zkCronos"]>;
+        chain: z.ZodEnum<["Abstract", "ApeChain", "Arbitrum", "Atto", "Avalanche", "Base", "Berachain", "Blast", "BSC", "CosmosHub", "Cronos", "Ethereum", "Harmony", "HyperCore", "HyperEvm", "Initia", "Injective", "Linea", "Mitosis", "Nano", "Nibiru", "Optimism", "Osmosis", "Pepecoin", "Plasma", "Polygon", "SEDA", "Sei", "SeiEvm", "Solana", "Somnia", "Sonic", "Stargaze", "Terra", "Unichain", "Yominet", "zkCronos"]>;
         tokenAddress: z.ZodOptional<z.ZodNullable<z.ZodString>>;
         amount: z.ZodNumber;
         amountUnit: z.ZodOptional<z.ZodNullable<z.ZodEnum<["absolute", "dollar"]>>>;
     }, "strip", z.ZodTypeAny, {
         type: "TOKEN";
-        chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Intergaze" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "Zaar" | "zkCronos";
+        chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Pepecoin" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "zkCronos";
         amount: number;
         tokenAddress?: string | null | undefined;
         amountUnit?: "absolute" | "dollar" | null | undefined;
     }, {
         type: "TOKEN";
-        chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Intergaze" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "Zaar" | "zkCronos";
+        chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Pepecoin" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "zkCronos";
         amount: number;
         tokenAddress?: string | null | undefined;
         amountUnit?: "absolute" | "dollar" | null | undefined;
     }>, z.ZodObject<{
         type: z.ZodLiteral<"NFT">;
-        chain: z.ZodEnum<["Abstract", "ApeChain", "Arbitrum", "Atto", "Avalanche", "Base", "Berachain", "Blast", "BSC", "CosmosHub", "Cronos", "Ethereum", "Harmony", "HyperCore", "HyperEvm", "Initia", "Injective", "Intergaze", "Linea", "Mitosis", "Nano", "Nibiru", "Optimism", "Osmosis", "Plasma", "Polygon", "SEDA", "Sei", "SeiEvm", "Solana", "Somnia", "Sonic", "Stargaze", "Terra", "Unichain", "Yominet", "Zaar", "zkCronos"]>;
+        chain: z.ZodEnum<["Abstract", "ApeChain", "Arbitrum", "Atto", "Avalanche", "Base", "Berachain", "Blast", "BSC", "CosmosHub", "Cronos", "Ethereum", "Harmony", "HyperCore", "HyperEvm", "Initia", "Injective", "Linea", "Mitosis", "Nano", "Nibiru", "Optimism", "Osmosis", "Pepecoin", "Plasma", "Polygon", "SEDA", "Sei", "SeiEvm", "Solana", "Somnia", "Sonic", "Stargaze", "Terra", "Unichain", "Yominet", "zkCronos"]>;
         tokenAddress: z.ZodOptional<z.ZodNullable<z.ZodString>>;
         tokenId: z.ZodString;
         amount: z.ZodOptional<z.ZodNullable<z.ZodNumber>>;
     }, "strip", z.ZodTypeAny, {
         type: "NFT";
-        chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Intergaze" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "Zaar" | "zkCronos";
+        chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Pepecoin" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "zkCronos";
         tokenId: string;
         tokenAddress?: string | null | undefined;
         amount?: number | null | undefined;
     }, {
         type: "NFT";
-        chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Intergaze" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "Zaar" | "zkCronos";
+        chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Pepecoin" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "zkCronos";
         tokenId: string;
         tokenAddress?: string | null | undefined;
         amount?: number | null | undefined;
@@ -954,13 +954,13 @@ export declare const QuestReward: z.ZodDiscriminatedUnion<"type", [z.ZodObject<{
         amount: number;
     } | {
         type: "TOKEN";
-        chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Intergaze" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "Zaar" | "zkCronos";
+        chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Pepecoin" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "zkCronos";
         amount: number;
         tokenAddress?: string | null | undefined;
         amountUnit?: "absolute" | "dollar" | null | undefined;
     } | {
         type: "NFT";
-        chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Intergaze" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "Zaar" | "zkCronos";
+        chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Pepecoin" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "zkCronos";
         tokenId: string;
         tokenAddress?: string | null | undefined;
         amount?: number | null | undefined;
@@ -986,13 +986,13 @@ export declare const QuestReward: z.ZodDiscriminatedUnion<"type", [z.ZodObject<{
         amount: number;
     } | {
         type: "TOKEN";
-        chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Intergaze" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "Zaar" | "zkCronos";
+        chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Pepecoin" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "zkCronos";
         amount: number;
         tokenAddress?: string | null | undefined;
         amountUnit?: "absolute" | "dollar" | null | undefined;
     } | {
         type: "NFT";
-        chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Intergaze" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "Zaar" | "zkCronos";
+        chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Pepecoin" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "zkCronos";
         tokenId: string;
         tokenAddress?: string | null | undefined;
         amount?: number | null | undefined;
@@ -1094,19 +1094,19 @@ export declare const QuestReward: z.ZodDiscriminatedUnion<"type", [z.ZodObject<{
         amount: number;
     }>, z.ZodObject<{
         type: z.ZodLiteral<"TOKEN">;
-        chain: z.ZodEnum<["Abstract", "ApeChain", "Arbitrum", "Atto", "Avalanche", "Base", "Berachain", "Blast", "BSC", "CosmosHub", "Cronos", "Ethereum", "Harmony", "HyperCore", "HyperEvm", "Initia", "Injective", "Intergaze", "Linea", "Mitosis", "Nano", "Nibiru", "Optimism", "Osmosis", "Plasma", "Polygon", "SEDA", "Sei", "SeiEvm", "Solana", "Somnia", "Sonic", "Stargaze", "Terra", "Unichain", "Yominet", "Zaar", "zkCronos"]>;
+        chain: z.ZodEnum<["Abstract", "ApeChain", "Arbitrum", "Atto", "Avalanche", "Base", "Berachain", "Blast", "BSC", "CosmosHub", "Cronos", "Ethereum", "Harmony", "HyperCore", "HyperEvm", "Initia", "Injective", "Linea", "Mitosis", "Nano", "Nibiru", "Optimism", "Osmosis", "Pepecoin", "Plasma", "Polygon", "SEDA", "Sei", "SeiEvm", "Solana", "Somnia", "Sonic", "Stargaze", "Terra", "Unichain", "Yominet", "zkCronos"]>;
         tokenAddress: z.ZodOptional<z.ZodNullable<z.ZodString>>;
         amount: z.ZodNumber;
         amountUnit: z.ZodOptional<z.ZodNullable<z.ZodEnum<["absolute", "dollar"]>>>;
     }, "strip", z.ZodTypeAny, {
         type: "TOKEN";
-        chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Intergaze" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "Zaar" | "zkCronos";
+        chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Pepecoin" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "zkCronos";
         amount: number;
         tokenAddress?: string | null | undefined;
         amountUnit?: "absolute" | "dollar" | null | undefined;
     }, {
         type: "TOKEN";
-        chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Intergaze" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "Zaar" | "zkCronos";
+        chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Pepecoin" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "zkCronos";
         amount: number;
         tokenAddress?: string | null | undefined;
         amountUnit?: "absolute" | "dollar" | null | undefined;
@@ -1128,7 +1128,7 @@ export declare const QuestReward: z.ZodDiscriminatedUnion<"type", [z.ZodObject<{
         amount: number;
     } | {
         type: "TOKEN";
-        chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Intergaze" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "Zaar" | "zkCronos";
+        chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Pepecoin" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "zkCronos";
         amount: number;
         tokenAddress?: string | null | undefined;
         amountUnit?: "absolute" | "dollar" | null | undefined;
@@ -1150,7 +1150,7 @@ export declare const QuestReward: z.ZodDiscriminatedUnion<"type", [z.ZodObject<{
         amount: number;
     } | {
         type: "TOKEN";
-        chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Intergaze" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "Zaar" | "zkCronos";
+        chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Pepecoin" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "zkCronos";
         amount: number;
         tokenAddress?: string | null | undefined;
         amountUnit?: "absolute" | "dollar" | null | undefined;
@@ -1179,14 +1179,14 @@ export declare const createQuestShape: {
         description: z.ZodString;
         endpoint: z.ZodString;
         userIdMethods: z.ZodArray<z.ZodEnum<["discord", "twitter", "wallets"]>, "many">;
-        walletChains: z.ZodOptional<z.ZodNullable<z.ZodArray<z.ZodEnum<["Abstract", "ApeChain", "Arbitrum", "Atto", "Avalanche", "Base", "Berachain", "Blast", "BSC", "CosmosHub", "Cronos", "Ethereum", "Harmony", "HyperCore", "HyperEvm", "Initia", "Injective", "Intergaze", "Linea", "Mitosis", "Nano", "Nibiru", "Optimism", "Osmosis", "Plasma", "Polygon", "SEDA", "Sei", "SeiEvm", "Solana", "Somnia", "Sonic", "Stargaze", "Terra", "Unichain", "Yominet", "Zaar", "zkCronos"]>, "many">>>;
+        walletChains: z.ZodOptional<z.ZodNullable<z.ZodArray<z.ZodEnum<["Abstract", "ApeChain", "Arbitrum", "Atto", "Avalanche", "Base", "Berachain", "Blast", "BSC", "CosmosHub", "Cronos", "Ethereum", "Harmony", "HyperCore", "HyperEvm", "Initia", "Injective", "Linea", "Mitosis", "Nano", "Nibiru", "Optimism", "Osmosis", "Pepecoin", "Plasma", "Polygon", "SEDA", "Sei", "SeiEvm", "Solana", "Somnia", "Sonic", "Stargaze", "Terra", "Unichain", "Yominet", "zkCronos"]>, "many">>>;
     }, "strip", z.ZodTypeAny, {
         type: "API";
         name: string;
         description: string;
         endpoint: string;
         userIdMethods: ("discord" | "twitter" | "wallets")[];
-        walletChains?: ("Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Intergaze" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "Zaar" | "zkCronos")[] | null | undefined;
+        walletChains?: ("Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Pepecoin" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "zkCronos")[] | null | undefined;
         isOptional?: boolean | null | undefined;
         isReviewRequired?: boolean | null | undefined;
         skipsReview?: boolean | null | undefined;
@@ -1198,7 +1198,7 @@ export declare const createQuestShape: {
         description: string;
         endpoint: string;
         userIdMethods: ("discord" | "twitter" | "wallets")[];
-        walletChains?: ("Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Intergaze" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "Zaar" | "zkCronos")[] | null | undefined;
+        walletChains?: ("Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Pepecoin" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "zkCronos")[] | null | undefined;
         isOptional?: boolean | null | undefined;
         isReviewRequired?: boolean | null | undefined;
         skipsReview?: boolean | null | undefined;
@@ -1322,7 +1322,7 @@ export declare const createQuestShape: {
         rewardBoost: z.ZodOptional<z.ZodNullable<z.ZodNumber>>;
         rewardBoostMode: z.ZodOptional<z.ZodNullable<z.ZodEnum<["MAX", "CUMULATIVE", "GLOBAL"]>>>;
         type: z.ZodLiteral<"NFT_BALANCE">;
-        chain: z.ZodEnum<["Abstract", "ApeChain", "Arbitrum", "Atto", "Avalanche", "Base", "Berachain", "Blast", "BSC", "CosmosHub", "Cronos", "Ethereum", "Harmony", "HyperCore", "HyperEvm", "Initia", "Injective", "Intergaze", "Linea", "Mitosis", "Nano", "Nibiru", "Optimism", "Osmosis", "Plasma", "Polygon", "SEDA", "Sei", "SeiEvm", "Solana", "Somnia", "Sonic", "Stargaze", "Terra", "Unichain", "Yominet", "Zaar", "zkCronos"]>;
+        chain: z.ZodEnum<["Abstract", "ApeChain", "Arbitrum", "Atto", "Avalanche", "Base", "Berachain", "Blast", "BSC", "CosmosHub", "Cronos", "Ethereum", "Harmony", "HyperCore", "HyperEvm", "Initia", "Injective", "Linea", "Mitosis", "Nano", "Nibiru", "Optimism", "Osmosis", "Pepecoin", "Plasma", "Polygon", "SEDA", "Sei", "SeiEvm", "Solana", "Somnia", "Sonic", "Stargaze", "Terra", "Unichain", "Yominet", "zkCronos"]>;
         contractAddress: z.ZodString;
         collectionName: z.ZodString;
         standard: z.ZodEnum<["CW_721", "ERC-721", "ERC-1155", "METAPLEX", "METAPLEX_CNFT", "METAPLEX_CORE", "SG_BADGE", "UNKNOWN"]>;
@@ -1346,7 +1346,7 @@ export declare const createQuestShape: {
         includeStakingContractsExclusively: z.ZodOptional<z.ZodNullable<z.ZodBoolean>>;
     }, "strip", z.ZodTypeAny, {
         type: "NFT_BALANCE";
-        chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Intergaze" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "Zaar" | "zkCronos";
+        chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Pepecoin" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "zkCronos";
         contractAddress: string;
         collectionName: string;
         standard: "CW_721" | "ERC-721" | "ERC-1155" | "METAPLEX" | "METAPLEX_CNFT" | "METAPLEX_CORE" | "SG_BADGE" | "UNKNOWN";
@@ -1369,7 +1369,7 @@ export declare const createQuestShape: {
         includeStakingContractsExclusively?: boolean | null | undefined;
     }, {
         type: "NFT_BALANCE";
-        chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Intergaze" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "Zaar" | "zkCronos";
+        chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Pepecoin" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "zkCronos";
         contractAddress: string;
         collectionName: string;
         standard: "CW_721" | "ERC-721" | "ERC-1155" | "METAPLEX" | "METAPLEX_CNFT" | "METAPLEX_CORE" | "SG_BADGE" | "UNKNOWN";
@@ -1555,7 +1555,7 @@ export declare const createQuestShape: {
         rewardBoost: z.ZodOptional<z.ZodNullable<z.ZodNumber>>;
         rewardBoostMode: z.ZodOptional<z.ZodNullable<z.ZodEnum<["MAX", "CUMULATIVE", "GLOBAL"]>>>;
         type: z.ZodLiteral<"TOKEN_SWAP">;
-        chain: z.ZodOptional<z.ZodNullable<z.ZodEnum<["Abstract", "ApeChain", "Arbitrum", "Atto", "Avalanche", "Base", "Berachain", "Blast", "BSC", "CosmosHub", "Cronos", "Ethereum", "Harmony", "HyperCore", "HyperEvm", "Initia", "Injective", "Intergaze", "Linea", "Mitosis", "Nano", "Nibiru", "Optimism", "Osmosis", "Plasma", "Polygon", "SEDA", "Sei", "SeiEvm", "Solana", "Somnia", "Sonic", "Stargaze", "Terra", "Unichain", "Yominet", "Zaar", "zkCronos"]>>>;
+        chain: z.ZodOptional<z.ZodNullable<z.ZodEnum<["Abstract", "ApeChain", "Arbitrum", "Atto", "Avalanche", "Base", "Berachain", "Blast", "BSC", "CosmosHub", "Cronos", "Ethereum", "Harmony", "HyperCore", "HyperEvm", "Initia", "Injective", "Linea", "Mitosis", "Nano", "Nibiru", "Optimism", "Osmosis", "Pepecoin", "Plasma", "Polygon", "SEDA", "Sei", "SeiEvm", "Solana", "Somnia", "Sonic", "Stargaze", "Terra", "Unichain", "Yominet", "zkCronos"]>>>;
         tokenAddress: z.ZodOptional<z.ZodNullable<z.ZodString>>;
         minAmount: z.ZodNumber;
         amountUnit: z.ZodEnum<["absolute", "dollar"]>;
@@ -1570,7 +1570,7 @@ export declare const createQuestShape: {
         skipsReview?: boolean | null | undefined;
         rewardBoost?: number | null | undefined;
         rewardBoostMode?: "MAX" | "CUMULATIVE" | "GLOBAL" | null | undefined;
-        chain?: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Intergaze" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "Zaar" | "zkCronos" | null | undefined;
+        chain?: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Pepecoin" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "zkCronos" | null | undefined;
         lookbackWindowDays?: number | null | undefined;
         tokenAddress?: string | null | undefined;
         allowedPlatforms?: ("COWSWAP" | "FLIPSUITE" | "GAS_ZIP" | "HYPERLIQUID" | "JUPITER" | "LI_FI" | "LIQUID_SWAP" | "OBSIDIAN" | "OKU_TRADE" | "ORBITER" | "RELAY" | "ROCKETX" | "SOLANA" | "SOMNEX" | "SKIP_GO" | "SQUID" | "STARGATE" | "SUSHI_SWAP" | "WOLFSWAP" | "VVS")[] | null | undefined;
@@ -1583,7 +1583,7 @@ export declare const createQuestShape: {
         skipsReview?: boolean | null | undefined;
         rewardBoost?: number | null | undefined;
         rewardBoostMode?: "MAX" | "CUMULATIVE" | "GLOBAL" | null | undefined;
-        chain?: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Intergaze" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "Zaar" | "zkCronos" | null | undefined;
+        chain?: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Pepecoin" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "zkCronos" | null | undefined;
         lookbackWindowDays?: number | null | undefined;
         tokenAddress?: string | null | undefined;
         allowedPlatforms?: ("COWSWAP" | "FLIPSUITE" | "GAS_ZIP" | "HYPERLIQUID" | "JUPITER" | "LI_FI" | "LIQUID_SWAP" | "OBSIDIAN" | "OKU_TRADE" | "ORBITER" | "RELAY" | "ROCKETX" | "SOLANA" | "SOMNEX" | "SKIP_GO" | "SQUID" | "STARGATE" | "SUSHI_SWAP" | "WOLFSWAP" | "VVS")[] | null | undefined;
@@ -1630,7 +1630,7 @@ export declare const createQuestShape: {
         rewardBoost: z.ZodOptional<z.ZodNullable<z.ZodNumber>>;
         rewardBoostMode: z.ZodOptional<z.ZodNullable<z.ZodEnum<["MAX", "CUMULATIVE", "GLOBAL"]>>>;
         type: z.ZodLiteral<"TOKEN_TIP">;
-        chain: z.ZodOptional<z.ZodNullable<z.ZodEnum<["Abstract", "ApeChain", "Arbitrum", "Atto", "Avalanche", "Base", "Berachain", "Blast", "BSC", "CosmosHub", "Cronos", "Ethereum", "Harmony", "HyperCore", "HyperEvm", "Initia", "Injective", "Intergaze", "Linea", "Mitosis", "Nano", "Nibiru", "Optimism", "Osmosis", "Plasma", "Polygon", "SEDA", "Sei", "SeiEvm", "Solana", "Somnia", "Sonic", "Stargaze", "Terra", "Unichain", "Yominet", "Zaar", "zkCronos"]>>>;
+        chain: z.ZodOptional<z.ZodNullable<z.ZodEnum<["Abstract", "ApeChain", "Arbitrum", "Atto", "Avalanche", "Base", "Berachain", "Blast", "BSC", "CosmosHub", "Cronos", "Ethereum", "Harmony", "HyperCore", "HyperEvm", "Initia", "Injective", "Linea", "Mitosis", "Nano", "Nibiru", "Optimism", "Osmosis", "Pepecoin", "Plasma", "Polygon", "SEDA", "Sei", "SeiEvm", "Solana", "Somnia", "Sonic", "Stargaze", "Terra", "Unichain", "Yominet", "zkCronos"]>>>;
         tokenAddress: z.ZodOptional<z.ZodNullable<z.ZodString>>;
         minAmount: z.ZodNumber;
         amountUnit: z.ZodEnum<["absolute", "dollar"]>;
@@ -1645,7 +1645,7 @@ export declare const createQuestShape: {
         skipsReview?: boolean | null | undefined;
         rewardBoost?: number | null | undefined;
         rewardBoostMode?: "MAX" | "CUMULATIVE" | "GLOBAL" | null | undefined;
-        chain?: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Intergaze" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "Zaar" | "zkCronos" | null | undefined;
+        chain?: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Pepecoin" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "zkCronos" | null | undefined;
         lookbackWindowDays?: number | null | undefined;
         tokenAddress?: string | null | undefined;
         excludedActions?: ("tip" | "airdrop" | "raffle")[] | null | undefined;
@@ -1658,7 +1658,7 @@ export declare const createQuestShape: {
         skipsReview?: boolean | null | undefined;
         rewardBoost?: number | null | undefined;
         rewardBoostMode?: "MAX" | "CUMULATIVE" | "GLOBAL" | null | undefined;
-        chain?: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Intergaze" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "Zaar" | "zkCronos" | null | undefined;
+        chain?: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Pepecoin" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "zkCronos" | null | undefined;
         lookbackWindowDays?: number | null | undefined;
         tokenAddress?: string | null | undefined;
         excludedActions?: ("tip" | "airdrop" | "raffle")[] | null | undefined;
@@ -1669,7 +1669,7 @@ export declare const createQuestShape: {
         rewardBoost: z.ZodOptional<z.ZodNullable<z.ZodNumber>>;
         rewardBoostMode: z.ZodOptional<z.ZodNullable<z.ZodEnum<["MAX", "CUMULATIVE", "GLOBAL"]>>>;
         type: z.ZodLiteral<"TOKEN_BALANCE">;
-        chain: z.ZodEnum<["Abstract", "ApeChain", "Arbitrum", "Atto", "Avalanche", "Base", "Berachain", "Blast", "BSC", "CosmosHub", "Cronos", "Ethereum", "Harmony", "HyperCore", "HyperEvm", "Initia", "Injective", "Intergaze", "Linea", "Mitosis", "Nano", "Nibiru", "Optimism", "Osmosis", "Plasma", "Polygon", "SEDA", "Sei", "SeiEvm", "Solana", "Somnia", "Sonic", "Stargaze", "Terra", "Unichain", "Yominet", "Zaar", "zkCronos"]>;
+        chain: z.ZodEnum<["Abstract", "ApeChain", "Arbitrum", "Atto", "Avalanche", "Base", "Berachain", "Blast", "BSC", "CosmosHub", "Cronos", "Ethereum", "Harmony", "HyperCore", "HyperEvm", "Initia", "Injective", "Linea", "Mitosis", "Nano", "Nibiru", "Optimism", "Osmosis", "Pepecoin", "Plasma", "Polygon", "SEDA", "Sei", "SeiEvm", "Solana", "Somnia", "Sonic", "Stargaze", "Terra", "Unichain", "Yominet", "zkCronos"]>;
         tokenAddress: z.ZodOptional<z.ZodNullable<z.ZodString>>;
         minAmount: z.ZodOptional<z.ZodNullable<z.ZodNumber>>;
         maxAmount: z.ZodOptional<z.ZodNullable<z.ZodNumber>>;
@@ -1680,7 +1680,7 @@ export declare const createQuestShape: {
         includeStakingContractsExclusively: z.ZodOptional<z.ZodNullable<z.ZodBoolean>>;
     }, "strip", z.ZodTypeAny, {
         type: "TOKEN_BALANCE";
-        chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Intergaze" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "Zaar" | "zkCronos";
+        chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Pepecoin" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "zkCronos";
         amountUnit: "absolute" | "dollar";
         isOptional?: boolean | null | undefined;
         isReviewRequired?: boolean | null | undefined;
@@ -1696,7 +1696,7 @@ export declare const createQuestShape: {
         tokenAddress?: string | null | undefined;
     }, {
         type: "TOKEN_BALANCE";
-        chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Intergaze" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "Zaar" | "zkCronos";
+        chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Pepecoin" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "zkCronos";
         amountUnit: "absolute" | "dollar";
         isOptional?: boolean | null | undefined;
         isReviewRequired?: boolean | null | undefined;
@@ -1932,12 +1932,12 @@ export declare const createQuestShape: {
         type: z.ZodLiteral<"WALLET_INPUT">;
         label: z.ZodString;
         description: z.ZodString;
-        chains: z.ZodArray<z.ZodEnum<["Abstract", "ApeChain", "Arbitrum", "Atto", "Avalanche", "Base", "Berachain", "Blast", "BSC", "CosmosHub", "Cronos", "Ethereum", "Harmony", "HyperCore", "HyperEvm", "Initia", "Injective", "Intergaze", "Linea", "Mitosis", "Nano", "Nibiru", "Optimism", "Osmosis", "Plasma", "Polygon", "SEDA", "Sei", "SeiEvm", "Solana", "Somnia", "Sonic", "Stargaze", "Terra", "Unichain", "Yominet", "Zaar", "zkCronos"]>, "many">;
+        chains: z.ZodArray<z.ZodEnum<["Abstract", "ApeChain", "Arbitrum", "Atto", "Avalanche", "Base", "Berachain", "Blast", "BSC", "CosmosHub", "Cronos", "Ethereum", "Harmony", "HyperCore", "HyperEvm", "Initia", "Injective", "Linea", "Mitosis", "Nano", "Nibiru", "Optimism", "Osmosis", "Pepecoin", "Plasma", "Polygon", "SEDA", "Sei", "SeiEvm", "Solana", "Somnia", "Sonic", "Stargaze", "Terra", "Unichain", "Yominet", "zkCronos"]>, "many">;
     }, "strip", z.ZodTypeAny, {
         type: "WALLET_INPUT";
         description: string;
         label: string;
-        chains: ("Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Intergaze" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "Zaar" | "zkCronos")[];
+        chains: ("Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Pepecoin" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "zkCronos")[];
         isOptional?: boolean | null | undefined;
         isReviewRequired?: boolean | null | undefined;
         skipsReview?: boolean | null | undefined;
@@ -1947,7 +1947,7 @@ export declare const createQuestShape: {
         type: "WALLET_INPUT";
         description: string;
         label: string;
-        chains: ("Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Intergaze" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "Zaar" | "zkCronos")[];
+        chains: ("Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Pepecoin" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "zkCronos")[];
         isOptional?: boolean | null | undefined;
         isReviewRequired?: boolean | null | undefined;
         skipsReview?: boolean | null | undefined;
@@ -1995,37 +1995,37 @@ export declare const createQuestShape: {
             amount: number;
         }>, z.ZodObject<{
             type: z.ZodLiteral<"TOKEN">;
-            chain: z.ZodEnum<["Abstract", "ApeChain", "Arbitrum", "Atto", "Avalanche", "Base", "Berachain", "Blast", "BSC", "CosmosHub", "Cronos", "Ethereum", "Harmony", "HyperCore", "HyperEvm", "Initia", "Injective", "Intergaze", "Linea", "Mitosis", "Nano", "Nibiru", "Optimism", "Osmosis", "Plasma", "Polygon", "SEDA", "Sei", "SeiEvm", "Solana", "Somnia", "Sonic", "Stargaze", "Terra", "Unichain", "Yominet", "Zaar", "zkCronos"]>;
+            chain: z.ZodEnum<["Abstract", "ApeChain", "Arbitrum", "Atto", "Avalanche", "Base", "Berachain", "Blast", "BSC", "CosmosHub", "Cronos", "Ethereum", "Harmony", "HyperCore", "HyperEvm", "Initia", "Injective", "Linea", "Mitosis", "Nano", "Nibiru", "Optimism", "Osmosis", "Pepecoin", "Plasma", "Polygon", "SEDA", "Sei", "SeiEvm", "Solana", "Somnia", "Sonic", "Stargaze", "Terra", "Unichain", "Yominet", "zkCronos"]>;
             tokenAddress: z.ZodOptional<z.ZodNullable<z.ZodString>>;
             amount: z.ZodNumber;
             amountUnit: z.ZodOptional<z.ZodNullable<z.ZodEnum<["absolute", "dollar"]>>>;
         }, "strip", z.ZodTypeAny, {
             type: "TOKEN";
-            chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Intergaze" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "Zaar" | "zkCronos";
+            chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Pepecoin" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "zkCronos";
             amount: number;
             tokenAddress?: string | null | undefined;
             amountUnit?: "absolute" | "dollar" | null | undefined;
         }, {
             type: "TOKEN";
-            chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Intergaze" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "Zaar" | "zkCronos";
+            chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Pepecoin" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "zkCronos";
             amount: number;
             tokenAddress?: string | null | undefined;
             amountUnit?: "absolute" | "dollar" | null | undefined;
         }>, z.ZodObject<{
             type: z.ZodLiteral<"NFT">;
-            chain: z.ZodEnum<["Abstract", "ApeChain", "Arbitrum", "Atto", "Avalanche", "Base", "Berachain", "Blast", "BSC", "CosmosHub", "Cronos", "Ethereum", "Harmony", "HyperCore", "HyperEvm", "Initia", "Injective", "Intergaze", "Linea", "Mitosis", "Nano", "Nibiru", "Optimism", "Osmosis", "Plasma", "Polygon", "SEDA", "Sei", "SeiEvm", "Solana", "Somnia", "Sonic", "Stargaze", "Terra", "Unichain", "Yominet", "Zaar", "zkCronos"]>;
+            chain: z.ZodEnum<["Abstract", "ApeChain", "Arbitrum", "Atto", "Avalanche", "Base", "Berachain", "Blast", "BSC", "CosmosHub", "Cronos", "Ethereum", "Harmony", "HyperCore", "HyperEvm", "Initia", "Injective", "Linea", "Mitosis", "Nano", "Nibiru", "Optimism", "Osmosis", "Pepecoin", "Plasma", "Polygon", "SEDA", "Sei", "SeiEvm", "Solana", "Somnia", "Sonic", "Stargaze", "Terra", "Unichain", "Yominet", "zkCronos"]>;
             tokenAddress: z.ZodOptional<z.ZodNullable<z.ZodString>>;
             tokenId: z.ZodString;
             amount: z.ZodOptional<z.ZodNullable<z.ZodNumber>>;
         }, "strip", z.ZodTypeAny, {
             type: "NFT";
-            chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Intergaze" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "Zaar" | "zkCronos";
+            chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Pepecoin" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "zkCronos";
             tokenId: string;
             tokenAddress?: string | null | undefined;
             amount?: number | null | undefined;
         }, {
             type: "NFT";
-            chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Intergaze" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "Zaar" | "zkCronos";
+            chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Pepecoin" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "zkCronos";
             tokenId: string;
             tokenAddress?: string | null | undefined;
             amount?: number | null | undefined;
@@ -2059,13 +2059,13 @@ export declare const createQuestShape: {
             amount: number;
         } | {
             type: "TOKEN";
-            chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Intergaze" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "Zaar" | "zkCronos";
+            chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Pepecoin" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "zkCronos";
             amount: number;
             tokenAddress?: string | null | undefined;
             amountUnit?: "absolute" | "dollar" | null | undefined;
         } | {
             type: "NFT";
-            chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Intergaze" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "Zaar" | "zkCronos";
+            chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Pepecoin" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "zkCronos";
             tokenId: string;
             tokenAddress?: string | null | undefined;
             amount?: number | null | undefined;
@@ -2091,13 +2091,13 @@ export declare const createQuestShape: {
             amount: number;
         } | {
             type: "TOKEN";
-            chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Intergaze" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "Zaar" | "zkCronos";
+            chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Pepecoin" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "zkCronos";
             amount: number;
             tokenAddress?: string | null | undefined;
             amountUnit?: "absolute" | "dollar" | null | undefined;
         } | {
             type: "NFT";
-            chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Intergaze" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "Zaar" | "zkCronos";
+            chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Pepecoin" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "zkCronos";
             tokenId: string;
             tokenAddress?: string | null | undefined;
             amount?: number | null | undefined;
@@ -2199,19 +2199,19 @@ export declare const createQuestShape: {
             amount: number;
         }>, z.ZodObject<{
             type: z.ZodLiteral<"TOKEN">;
-            chain: z.ZodEnum<["Abstract", "ApeChain", "Arbitrum", "Atto", "Avalanche", "Base", "Berachain", "Blast", "BSC", "CosmosHub", "Cronos", "Ethereum", "Harmony", "HyperCore", "HyperEvm", "Initia", "Injective", "Intergaze", "Linea", "Mitosis", "Nano", "Nibiru", "Optimism", "Osmosis", "Plasma", "Polygon", "SEDA", "Sei", "SeiEvm", "Solana", "Somnia", "Sonic", "Stargaze", "Terra", "Unichain", "Yominet", "Zaar", "zkCronos"]>;
+            chain: z.ZodEnum<["Abstract", "ApeChain", "Arbitrum", "Atto", "Avalanche", "Base", "Berachain", "Blast", "BSC", "CosmosHub", "Cronos", "Ethereum", "Harmony", "HyperCore", "HyperEvm", "Initia", "Injective", "Linea", "Mitosis", "Nano", "Nibiru", "Optimism", "Osmosis", "Pepecoin", "Plasma", "Polygon", "SEDA", "Sei", "SeiEvm", "Solana", "Somnia", "Sonic", "Stargaze", "Terra", "Unichain", "Yominet", "zkCronos"]>;
             tokenAddress: z.ZodOptional<z.ZodNullable<z.ZodString>>;
             amount: z.ZodNumber;
             amountUnit: z.ZodOptional<z.ZodNullable<z.ZodEnum<["absolute", "dollar"]>>>;
         }, "strip", z.ZodTypeAny, {
             type: "TOKEN";
-            chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Intergaze" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "Zaar" | "zkCronos";
+            chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Pepecoin" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "zkCronos";
             amount: number;
             tokenAddress?: string | null | undefined;
             amountUnit?: "absolute" | "dollar" | null | undefined;
         }, {
             type: "TOKEN";
-            chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Intergaze" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "Zaar" | "zkCronos";
+            chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Pepecoin" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "zkCronos";
             amount: number;
             tokenAddress?: string | null | undefined;
             amountUnit?: "absolute" | "dollar" | null | undefined;
@@ -2233,7 +2233,7 @@ export declare const createQuestShape: {
             amount: number;
         } | {
             type: "TOKEN";
-            chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Intergaze" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "Zaar" | "zkCronos";
+            chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Pepecoin" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "zkCronos";
             amount: number;
             tokenAddress?: string | null | undefined;
             amountUnit?: "absolute" | "dollar" | null | undefined;
@@ -2255,7 +2255,7 @@ export declare const createQuestShape: {
             amount: number;
         } | {
             type: "TOKEN";
-            chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Intergaze" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "Zaar" | "zkCronos";
+            chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Pepecoin" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "zkCronos";
             amount: number;
             tokenAddress?: string | null | undefined;
             amountUnit?: "absolute" | "dollar" | null | undefined;
@@ -2285,14 +2285,14 @@ export declare const createQuestInput: z.ZodObject<{
         description: z.ZodString;
         endpoint: z.ZodString;
         userIdMethods: z.ZodArray<z.ZodEnum<["discord", "twitter", "wallets"]>, "many">;
-        walletChains: z.ZodOptional<z.ZodNullable<z.ZodArray<z.ZodEnum<["Abstract", "ApeChain", "Arbitrum", "Atto", "Avalanche", "Base", "Berachain", "Blast", "BSC", "CosmosHub", "Cronos", "Ethereum", "Harmony", "HyperCore", "HyperEvm", "Initia", "Injective", "Intergaze", "Linea", "Mitosis", "Nano", "Nibiru", "Optimism", "Osmosis", "Plasma", "Polygon", "SEDA", "Sei", "SeiEvm", "Solana", "Somnia", "Sonic", "Stargaze", "Terra", "Unichain", "Yominet", "Zaar", "zkCronos"]>, "many">>>;
+        walletChains: z.ZodOptional<z.ZodNullable<z.ZodArray<z.ZodEnum<["Abstract", "ApeChain", "Arbitrum", "Atto", "Avalanche", "Base", "Berachain", "Blast", "BSC", "CosmosHub", "Cronos", "Ethereum", "Harmony", "HyperCore", "HyperEvm", "Initia", "Injective", "Linea", "Mitosis", "Nano", "Nibiru", "Optimism", "Osmosis", "Pepecoin", "Plasma", "Polygon", "SEDA", "Sei", "SeiEvm", "Solana", "Somnia", "Sonic", "Stargaze", "Terra", "Unichain", "Yominet", "zkCronos"]>, "many">>>;
     }, "strip", z.ZodTypeAny, {
         type: "API";
         name: string;
         description: string;
         endpoint: string;
         userIdMethods: ("discord" | "twitter" | "wallets")[];
-        walletChains?: ("Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Intergaze" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "Zaar" | "zkCronos")[] | null | undefined;
+        walletChains?: ("Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Pepecoin" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "zkCronos")[] | null | undefined;
         isOptional?: boolean | null | undefined;
         isReviewRequired?: boolean | null | undefined;
         skipsReview?: boolean | null | undefined;
@@ -2304,7 +2304,7 @@ export declare const createQuestInput: z.ZodObject<{
         description: string;
         endpoint: string;
         userIdMethods: ("discord" | "twitter" | "wallets")[];
-        walletChains?: ("Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Intergaze" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "Zaar" | "zkCronos")[] | null | undefined;
+        walletChains?: ("Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Pepecoin" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "zkCronos")[] | null | undefined;
         isOptional?: boolean | null | undefined;
         isReviewRequired?: boolean | null | undefined;
         skipsReview?: boolean | null | undefined;
@@ -2428,7 +2428,7 @@ export declare const createQuestInput: z.ZodObject<{
         rewardBoost: z.ZodOptional<z.ZodNullable<z.ZodNumber>>;
         rewardBoostMode: z.ZodOptional<z.ZodNullable<z.ZodEnum<["MAX", "CUMULATIVE", "GLOBAL"]>>>;
         type: z.ZodLiteral<"NFT_BALANCE">;
-        chain: z.ZodEnum<["Abstract", "ApeChain", "Arbitrum", "Atto", "Avalanche", "Base", "Berachain", "Blast", "BSC", "CosmosHub", "Cronos", "Ethereum", "Harmony", "HyperCore", "HyperEvm", "Initia", "Injective", "Intergaze", "Linea", "Mitosis", "Nano", "Nibiru", "Optimism", "Osmosis", "Plasma", "Polygon", "SEDA", "Sei", "SeiEvm", "Solana", "Somnia", "Sonic", "Stargaze", "Terra", "Unichain", "Yominet", "Zaar", "zkCronos"]>;
+        chain: z.ZodEnum<["Abstract", "ApeChain", "Arbitrum", "Atto", "Avalanche", "Base", "Berachain", "Blast", "BSC", "CosmosHub", "Cronos", "Ethereum", "Harmony", "HyperCore", "HyperEvm", "Initia", "Injective", "Linea", "Mitosis", "Nano", "Nibiru", "Optimism", "Osmosis", "Pepecoin", "Plasma", "Polygon", "SEDA", "Sei", "SeiEvm", "Solana", "Somnia", "Sonic", "Stargaze", "Terra", "Unichain", "Yominet", "zkCronos"]>;
         contractAddress: z.ZodString;
         collectionName: z.ZodString;
         standard: z.ZodEnum<["CW_721", "ERC-721", "ERC-1155", "METAPLEX", "METAPLEX_CNFT", "METAPLEX_CORE", "SG_BADGE", "UNKNOWN"]>;
@@ -2452,7 +2452,7 @@ export declare const createQuestInput: z.ZodObject<{
         includeStakingContractsExclusively: z.ZodOptional<z.ZodNullable<z.ZodBoolean>>;
     }, "strip", z.ZodTypeAny, {
         type: "NFT_BALANCE";
-        chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Intergaze" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "Zaar" | "zkCronos";
+        chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Pepecoin" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "zkCronos";
         contractAddress: string;
         collectionName: string;
         standard: "CW_721" | "ERC-721" | "ERC-1155" | "METAPLEX" | "METAPLEX_CNFT" | "METAPLEX_CORE" | "SG_BADGE" | "UNKNOWN";
@@ -2475,7 +2475,7 @@ export declare const createQuestInput: z.ZodObject<{
         includeStakingContractsExclusively?: boolean | null | undefined;
     }, {
         type: "NFT_BALANCE";
-        chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Intergaze" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "Zaar" | "zkCronos";
+        chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Pepecoin" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "zkCronos";
         contractAddress: string;
         collectionName: string;
         standard: "CW_721" | "ERC-721" | "ERC-1155" | "METAPLEX" | "METAPLEX_CNFT" | "METAPLEX_CORE" | "SG_BADGE" | "UNKNOWN";
@@ -2661,7 +2661,7 @@ export declare const createQuestInput: z.ZodObject<{
         rewardBoost: z.ZodOptional<z.ZodNullable<z.ZodNumber>>;
         rewardBoostMode: z.ZodOptional<z.ZodNullable<z.ZodEnum<["MAX", "CUMULATIVE", "GLOBAL"]>>>;
         type: z.ZodLiteral<"TOKEN_SWAP">;
-        chain: z.ZodOptional<z.ZodNullable<z.ZodEnum<["Abstract", "ApeChain", "Arbitrum", "Atto", "Avalanche", "Base", "Berachain", "Blast", "BSC", "CosmosHub", "Cronos", "Ethereum", "Harmony", "HyperCore", "HyperEvm", "Initia", "Injective", "Intergaze", "Linea", "Mitosis", "Nano", "Nibiru", "Optimism", "Osmosis", "Plasma", "Polygon", "SEDA", "Sei", "SeiEvm", "Solana", "Somnia", "Sonic", "Stargaze", "Terra", "Unichain", "Yominet", "Zaar", "zkCronos"]>>>;
+        chain: z.ZodOptional<z.ZodNullable<z.ZodEnum<["Abstract", "ApeChain", "Arbitrum", "Atto", "Avalanche", "Base", "Berachain", "Blast", "BSC", "CosmosHub", "Cronos", "Ethereum", "Harmony", "HyperCore", "HyperEvm", "Initia", "Injective", "Linea", "Mitosis", "Nano", "Nibiru", "Optimism", "Osmosis", "Pepecoin", "Plasma", "Polygon", "SEDA", "Sei", "SeiEvm", "Solana", "Somnia", "Sonic", "Stargaze", "Terra", "Unichain", "Yominet", "zkCronos"]>>>;
         tokenAddress: z.ZodOptional<z.ZodNullable<z.ZodString>>;
         minAmount: z.ZodNumber;
         amountUnit: z.ZodEnum<["absolute", "dollar"]>;
@@ -2676,7 +2676,7 @@ export declare const createQuestInput: z.ZodObject<{
         skipsReview?: boolean | null | undefined;
         rewardBoost?: number | null | undefined;
         rewardBoostMode?: "MAX" | "CUMULATIVE" | "GLOBAL" | null | undefined;
-        chain?: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Intergaze" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "Zaar" | "zkCronos" | null | undefined;
+        chain?: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Pepecoin" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "zkCronos" | null | undefined;
         lookbackWindowDays?: number | null | undefined;
         tokenAddress?: string | null | undefined;
         allowedPlatforms?: ("COWSWAP" | "FLIPSUITE" | "GAS_ZIP" | "HYPERLIQUID" | "JUPITER" | "LI_FI" | "LIQUID_SWAP" | "OBSIDIAN" | "OKU_TRADE" | "ORBITER" | "RELAY" | "ROCKETX" | "SOLANA" | "SOMNEX" | "SKIP_GO" | "SQUID" | "STARGATE" | "SUSHI_SWAP" | "WOLFSWAP" | "VVS")[] | null | undefined;
@@ -2689,7 +2689,7 @@ export declare const createQuestInput: z.ZodObject<{
         skipsReview?: boolean | null | undefined;
         rewardBoost?: number | null | undefined;
         rewardBoostMode?: "MAX" | "CUMULATIVE" | "GLOBAL" | null | undefined;
-        chain?: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Intergaze" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "Zaar" | "zkCronos" | null | undefined;
+        chain?: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Pepecoin" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "zkCronos" | null | undefined;
         lookbackWindowDays?: number | null | undefined;
         tokenAddress?: string | null | undefined;
         allowedPlatforms?: ("COWSWAP" | "FLIPSUITE" | "GAS_ZIP" | "HYPERLIQUID" | "JUPITER" | "LI_FI" | "LIQUID_SWAP" | "OBSIDIAN" | "OKU_TRADE" | "ORBITER" | "RELAY" | "ROCKETX" | "SOLANA" | "SOMNEX" | "SKIP_GO" | "SQUID" | "STARGATE" | "SUSHI_SWAP" | "WOLFSWAP" | "VVS")[] | null | undefined;
@@ -2736,7 +2736,7 @@ export declare const createQuestInput: z.ZodObject<{
         rewardBoost: z.ZodOptional<z.ZodNullable<z.ZodNumber>>;
         rewardBoostMode: z.ZodOptional<z.ZodNullable<z.ZodEnum<["MAX", "CUMULATIVE", "GLOBAL"]>>>;
         type: z.ZodLiteral<"TOKEN_TIP">;
-        chain: z.ZodOptional<z.ZodNullable<z.ZodEnum<["Abstract", "ApeChain", "Arbitrum", "Atto", "Avalanche", "Base", "Berachain", "Blast", "BSC", "CosmosHub", "Cronos", "Ethereum", "Harmony", "HyperCore", "HyperEvm", "Initia", "Injective", "Intergaze", "Linea", "Mitosis", "Nano", "Nibiru", "Optimism", "Osmosis", "Plasma", "Polygon", "SEDA", "Sei", "SeiEvm", "Solana", "Somnia", "Sonic", "Stargaze", "Terra", "Unichain", "Yominet", "Zaar", "zkCronos"]>>>;
+        chain: z.ZodOptional<z.ZodNullable<z.ZodEnum<["Abstract", "ApeChain", "Arbitrum", "Atto", "Avalanche", "Base", "Berachain", "Blast", "BSC", "CosmosHub", "Cronos", "Ethereum", "Harmony", "HyperCore", "HyperEvm", "Initia", "Injective", "Linea", "Mitosis", "Nano", "Nibiru", "Optimism", "Osmosis", "Pepecoin", "Plasma", "Polygon", "SEDA", "Sei", "SeiEvm", "Solana", "Somnia", "Sonic", "Stargaze", "Terra", "Unichain", "Yominet", "zkCronos"]>>>;
         tokenAddress: z.ZodOptional<z.ZodNullable<z.ZodString>>;
         minAmount: z.ZodNumber;
         amountUnit: z.ZodEnum<["absolute", "dollar"]>;
@@ -2751,7 +2751,7 @@ export declare const createQuestInput: z.ZodObject<{
         skipsReview?: boolean | null | undefined;
         rewardBoost?: number | null | undefined;
         rewardBoostMode?: "MAX" | "CUMULATIVE" | "GLOBAL" | null | undefined;
-        chain?: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Intergaze" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "Zaar" | "zkCronos" | null | undefined;
+        chain?: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Pepecoin" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "zkCronos" | null | undefined;
         lookbackWindowDays?: number | null | undefined;
         tokenAddress?: string | null | undefined;
         excludedActions?: ("tip" | "airdrop" | "raffle")[] | null | undefined;
@@ -2764,7 +2764,7 @@ export declare const createQuestInput: z.ZodObject<{
         skipsReview?: boolean | null | undefined;
         rewardBoost?: number | null | undefined;
         rewardBoostMode?: "MAX" | "CUMULATIVE" | "GLOBAL" | null | undefined;
-        chain?: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Intergaze" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "Zaar" | "zkCronos" | null | undefined;
+        chain?: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Pepecoin" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "zkCronos" | null | undefined;
         lookbackWindowDays?: number | null | undefined;
         tokenAddress?: string | null | undefined;
         excludedActions?: ("tip" | "airdrop" | "raffle")[] | null | undefined;
@@ -2775,7 +2775,7 @@ export declare const createQuestInput: z.ZodObject<{
         rewardBoost: z.ZodOptional<z.ZodNullable<z.ZodNumber>>;
         rewardBoostMode: z.ZodOptional<z.ZodNullable<z.ZodEnum<["MAX", "CUMULATIVE", "GLOBAL"]>>>;
         type: z.ZodLiteral<"TOKEN_BALANCE">;
-        chain: z.ZodEnum<["Abstract", "ApeChain", "Arbitrum", "Atto", "Avalanche", "Base", "Berachain", "Blast", "BSC", "CosmosHub", "Cronos", "Ethereum", "Harmony", "HyperCore", "HyperEvm", "Initia", "Injective", "Intergaze", "Linea", "Mitosis", "Nano", "Nibiru", "Optimism", "Osmosis", "Plasma", "Polygon", "SEDA", "Sei", "SeiEvm", "Solana", "Somnia", "Sonic", "Stargaze", "Terra", "Unichain", "Yominet", "Zaar", "zkCronos"]>;
+        chain: z.ZodEnum<["Abstract", "ApeChain", "Arbitrum", "Atto", "Avalanche", "Base", "Berachain", "Blast", "BSC", "CosmosHub", "Cronos", "Ethereum", "Harmony", "HyperCore", "HyperEvm", "Initia", "Injective", "Linea", "Mitosis", "Nano", "Nibiru", "Optimism", "Osmosis", "Pepecoin", "Plasma", "Polygon", "SEDA", "Sei", "SeiEvm", "Solana", "Somnia", "Sonic", "Stargaze", "Terra", "Unichain", "Yominet", "zkCronos"]>;
         tokenAddress: z.ZodOptional<z.ZodNullable<z.ZodString>>;
         minAmount: z.ZodOptional<z.ZodNullable<z.ZodNumber>>;
         maxAmount: z.ZodOptional<z.ZodNullable<z.ZodNumber>>;
@@ -2786,7 +2786,7 @@ export declare const createQuestInput: z.ZodObject<{
         includeStakingContractsExclusively: z.ZodOptional<z.ZodNullable<z.ZodBoolean>>;
     }, "strip", z.ZodTypeAny, {
         type: "TOKEN_BALANCE";
-        chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Intergaze" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "Zaar" | "zkCronos";
+        chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Pepecoin" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "zkCronos";
         amountUnit: "absolute" | "dollar";
         isOptional?: boolean | null | undefined;
         isReviewRequired?: boolean | null | undefined;
@@ -2802,7 +2802,7 @@ export declare const createQuestInput: z.ZodObject<{
         tokenAddress?: string | null | undefined;
     }, {
         type: "TOKEN_BALANCE";
-        chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Intergaze" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "Zaar" | "zkCronos";
+        chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Pepecoin" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "zkCronos";
         amountUnit: "absolute" | "dollar";
         isOptional?: boolean | null | undefined;
         isReviewRequired?: boolean | null | undefined;
@@ -3038,12 +3038,12 @@ export declare const createQuestInput: z.ZodObject<{
         type: z.ZodLiteral<"WALLET_INPUT">;
         label: z.ZodString;
         description: z.ZodString;
-        chains: z.ZodArray<z.ZodEnum<["Abstract", "ApeChain", "Arbitrum", "Atto", "Avalanche", "Base", "Berachain", "Blast", "BSC", "CosmosHub", "Cronos", "Ethereum", "Harmony", "HyperCore", "HyperEvm", "Initia", "Injective", "Intergaze", "Linea", "Mitosis", "Nano", "Nibiru", "Optimism", "Osmosis", "Plasma", "Polygon", "SEDA", "Sei", "SeiEvm", "Solana", "Somnia", "Sonic", "Stargaze", "Terra", "Unichain", "Yominet", "Zaar", "zkCronos"]>, "many">;
+        chains: z.ZodArray<z.ZodEnum<["Abstract", "ApeChain", "Arbitrum", "Atto", "Avalanche", "Base", "Berachain", "Blast", "BSC", "CosmosHub", "Cronos", "Ethereum", "Harmony", "HyperCore", "HyperEvm", "Initia", "Injective", "Linea", "Mitosis", "Nano", "Nibiru", "Optimism", "Osmosis", "Pepecoin", "Plasma", "Polygon", "SEDA", "Sei", "SeiEvm", "Solana", "Somnia", "Sonic", "Stargaze", "Terra", "Unichain", "Yominet", "zkCronos"]>, "many">;
     }, "strip", z.ZodTypeAny, {
         type: "WALLET_INPUT";
         description: string;
         label: string;
-        chains: ("Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Intergaze" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "Zaar" | "zkCronos")[];
+        chains: ("Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Pepecoin" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "zkCronos")[];
         isOptional?: boolean | null | undefined;
         isReviewRequired?: boolean | null | undefined;
         skipsReview?: boolean | null | undefined;
@@ -3053,7 +3053,7 @@ export declare const createQuestInput: z.ZodObject<{
         type: "WALLET_INPUT";
         description: string;
         label: string;
-        chains: ("Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Intergaze" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "Zaar" | "zkCronos")[];
+        chains: ("Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Pepecoin" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "zkCronos")[];
         isOptional?: boolean | null | undefined;
         isReviewRequired?: boolean | null | undefined;
         skipsReview?: boolean | null | undefined;
@@ -3101,37 +3101,37 @@ export declare const createQuestInput: z.ZodObject<{
             amount: number;
         }>, z.ZodObject<{
             type: z.ZodLiteral<"TOKEN">;
-            chain: z.ZodEnum<["Abstract", "ApeChain", "Arbitrum", "Atto", "Avalanche", "Base", "Berachain", "Blast", "BSC", "CosmosHub", "Cronos", "Ethereum", "Harmony", "HyperCore", "HyperEvm", "Initia", "Injective", "Intergaze", "Linea", "Mitosis", "Nano", "Nibiru", "Optimism", "Osmosis", "Plasma", "Polygon", "SEDA", "Sei", "SeiEvm", "Solana", "Somnia", "Sonic", "Stargaze", "Terra", "Unichain", "Yominet", "Zaar", "zkCronos"]>;
+            chain: z.ZodEnum<["Abstract", "ApeChain", "Arbitrum", "Atto", "Avalanche", "Base", "Berachain", "Blast", "BSC", "CosmosHub", "Cronos", "Ethereum", "Harmony", "HyperCore", "HyperEvm", "Initia", "Injective", "Linea", "Mitosis", "Nano", "Nibiru", "Optimism", "Osmosis", "Pepecoin", "Plasma", "Polygon", "SEDA", "Sei", "SeiEvm", "Solana", "Somnia", "Sonic", "Stargaze", "Terra", "Unichain", "Yominet", "zkCronos"]>;
             tokenAddress: z.ZodOptional<z.ZodNullable<z.ZodString>>;
             amount: z.ZodNumber;
             amountUnit: z.ZodOptional<z.ZodNullable<z.ZodEnum<["absolute", "dollar"]>>>;
         }, "strip", z.ZodTypeAny, {
             type: "TOKEN";
-            chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Intergaze" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "Zaar" | "zkCronos";
+            chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Pepecoin" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "zkCronos";
             amount: number;
             tokenAddress?: string | null | undefined;
             amountUnit?: "absolute" | "dollar" | null | undefined;
         }, {
             type: "TOKEN";
-            chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Intergaze" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "Zaar" | "zkCronos";
+            chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Pepecoin" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "zkCronos";
             amount: number;
             tokenAddress?: string | null | undefined;
             amountUnit?: "absolute" | "dollar" | null | undefined;
         }>, z.ZodObject<{
             type: z.ZodLiteral<"NFT">;
-            chain: z.ZodEnum<["Abstract", "ApeChain", "Arbitrum", "Atto", "Avalanche", "Base", "Berachain", "Blast", "BSC", "CosmosHub", "Cronos", "Ethereum", "Harmony", "HyperCore", "HyperEvm", "Initia", "Injective", "Intergaze", "Linea", "Mitosis", "Nano", "Nibiru", "Optimism", "Osmosis", "Plasma", "Polygon", "SEDA", "Sei", "SeiEvm", "Solana", "Somnia", "Sonic", "Stargaze", "Terra", "Unichain", "Yominet", "Zaar", "zkCronos"]>;
+            chain: z.ZodEnum<["Abstract", "ApeChain", "Arbitrum", "Atto", "Avalanche", "Base", "Berachain", "Blast", "BSC", "CosmosHub", "Cronos", "Ethereum", "Harmony", "HyperCore", "HyperEvm", "Initia", "Injective", "Linea", "Mitosis", "Nano", "Nibiru", "Optimism", "Osmosis", "Pepecoin", "Plasma", "Polygon", "SEDA", "Sei", "SeiEvm", "Solana", "Somnia", "Sonic", "Stargaze", "Terra", "Unichain", "Yominet", "zkCronos"]>;
             tokenAddress: z.ZodOptional<z.ZodNullable<z.ZodString>>;
             tokenId: z.ZodString;
             amount: z.ZodOptional<z.ZodNullable<z.ZodNumber>>;
         }, "strip", z.ZodTypeAny, {
             type: "NFT";
-            chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Intergaze" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "Zaar" | "zkCronos";
+            chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Pepecoin" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "zkCronos";
             tokenId: string;
             tokenAddress?: string | null | undefined;
             amount?: number | null | undefined;
         }, {
             type: "NFT";
-            chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Intergaze" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "Zaar" | "zkCronos";
+            chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Pepecoin" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "zkCronos";
             tokenId: string;
             tokenAddress?: string | null | undefined;
             amount?: number | null | undefined;
@@ -3165,13 +3165,13 @@ export declare const createQuestInput: z.ZodObject<{
             amount: number;
         } | {
             type: "TOKEN";
-            chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Intergaze" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "Zaar" | "zkCronos";
+            chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Pepecoin" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "zkCronos";
             amount: number;
             tokenAddress?: string | null | undefined;
             amountUnit?: "absolute" | "dollar" | null | undefined;
         } | {
             type: "NFT";
-            chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Intergaze" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "Zaar" | "zkCronos";
+            chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Pepecoin" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "zkCronos";
             tokenId: string;
             tokenAddress?: string | null | undefined;
             amount?: number | null | undefined;
@@ -3197,13 +3197,13 @@ export declare const createQuestInput: z.ZodObject<{
             amount: number;
         } | {
             type: "TOKEN";
-            chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Intergaze" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "Zaar" | "zkCronos";
+            chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Pepecoin" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "zkCronos";
             amount: number;
             tokenAddress?: string | null | undefined;
             amountUnit?: "absolute" | "dollar" | null | undefined;
         } | {
             type: "NFT";
-            chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Intergaze" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "Zaar" | "zkCronos";
+            chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Pepecoin" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "zkCronos";
             tokenId: string;
             tokenAddress?: string | null | undefined;
             amount?: number | null | undefined;
@@ -3305,19 +3305,19 @@ export declare const createQuestInput: z.ZodObject<{
             amount: number;
         }>, z.ZodObject<{
             type: z.ZodLiteral<"TOKEN">;
-            chain: z.ZodEnum<["Abstract", "ApeChain", "Arbitrum", "Atto", "Avalanche", "Base", "Berachain", "Blast", "BSC", "CosmosHub", "Cronos", "Ethereum", "Harmony", "HyperCore", "HyperEvm", "Initia", "Injective", "Intergaze", "Linea", "Mitosis", "Nano", "Nibiru", "Optimism", "Osmosis", "Plasma", "Polygon", "SEDA", "Sei", "SeiEvm", "Solana", "Somnia", "Sonic", "Stargaze", "Terra", "Unichain", "Yominet", "Zaar", "zkCronos"]>;
+            chain: z.ZodEnum<["Abstract", "ApeChain", "Arbitrum", "Atto", "Avalanche", "Base", "Berachain", "Blast", "BSC", "CosmosHub", "Cronos", "Ethereum", "Harmony", "HyperCore", "HyperEvm", "Initia", "Injective", "Linea", "Mitosis", "Nano", "Nibiru", "Optimism", "Osmosis", "Pepecoin", "Plasma", "Polygon", "SEDA", "Sei", "SeiEvm", "Solana", "Somnia", "Sonic", "Stargaze", "Terra", "Unichain", "Yominet", "zkCronos"]>;
             tokenAddress: z.ZodOptional<z.ZodNullable<z.ZodString>>;
             amount: z.ZodNumber;
             amountUnit: z.ZodOptional<z.ZodNullable<z.ZodEnum<["absolute", "dollar"]>>>;
         }, "strip", z.ZodTypeAny, {
             type: "TOKEN";
-            chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Intergaze" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "Zaar" | "zkCronos";
+            chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Pepecoin" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "zkCronos";
             amount: number;
             tokenAddress?: string | null | undefined;
             amountUnit?: "absolute" | "dollar" | null | undefined;
         }, {
             type: "TOKEN";
-            chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Intergaze" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "Zaar" | "zkCronos";
+            chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Pepecoin" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "zkCronos";
             amount: number;
             tokenAddress?: string | null | undefined;
             amountUnit?: "absolute" | "dollar" | null | undefined;
@@ -3339,7 +3339,7 @@ export declare const createQuestInput: z.ZodObject<{
             amount: number;
         } | {
             type: "TOKEN";
-            chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Intergaze" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "Zaar" | "zkCronos";
+            chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Pepecoin" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "zkCronos";
             amount: number;
             tokenAddress?: string | null | undefined;
             amountUnit?: "absolute" | "dollar" | null | undefined;
@@ -3361,7 +3361,7 @@ export declare const createQuestInput: z.ZodObject<{
             amount: number;
         } | {
             type: "TOKEN";
-            chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Intergaze" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "Zaar" | "zkCronos";
+            chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Pepecoin" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "zkCronos";
             amount: number;
             tokenAddress?: string | null | undefined;
             amountUnit?: "absolute" | "dollar" | null | undefined;
@@ -3379,7 +3379,7 @@ export declare const createQuestInput: z.ZodObject<{
         description: string;
         endpoint: string;
         userIdMethods: ("discord" | "twitter" | "wallets")[];
-        walletChains?: ("Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Intergaze" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "Zaar" | "zkCronos")[] | null | undefined;
+        walletChains?: ("Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Pepecoin" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "zkCronos")[] | null | undefined;
         isOptional?: boolean | null | undefined;
         isReviewRequired?: boolean | null | undefined;
         skipsReview?: boolean | null | undefined;
@@ -3424,7 +3424,7 @@ export declare const createQuestInput: z.ZodObject<{
         rewardBoostMode?: "MAX" | "CUMULATIVE" | "GLOBAL" | null | undefined;
     } | {
         type: "NFT_BALANCE";
-        chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Intergaze" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "Zaar" | "zkCronos";
+        chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Pepecoin" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "zkCronos";
         contractAddress: string;
         collectionName: string;
         standard: "CW_721" | "ERC-721" | "ERC-1155" | "METAPLEX" | "METAPLEX_CNFT" | "METAPLEX_CORE" | "SG_BADGE" | "UNKNOWN";
@@ -3504,7 +3504,7 @@ export declare const createQuestInput: z.ZodObject<{
         skipsReview?: boolean | null | undefined;
         rewardBoost?: number | null | undefined;
         rewardBoostMode?: "MAX" | "CUMULATIVE" | "GLOBAL" | null | undefined;
-        chain?: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Intergaze" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "Zaar" | "zkCronos" | null | undefined;
+        chain?: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Pepecoin" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "zkCronos" | null | undefined;
         lookbackWindowDays?: number | null | undefined;
         tokenAddress?: string | null | undefined;
         allowedPlatforms?: ("COWSWAP" | "FLIPSUITE" | "GAS_ZIP" | "HYPERLIQUID" | "JUPITER" | "LI_FI" | "LIQUID_SWAP" | "OBSIDIAN" | "OKU_TRADE" | "ORBITER" | "RELAY" | "ROCKETX" | "SOLANA" | "SOMNEX" | "SKIP_GO" | "SQUID" | "STARGATE" | "SUSHI_SWAP" | "WOLFSWAP" | "VVS")[] | null | undefined;
@@ -3529,13 +3529,13 @@ export declare const createQuestInput: z.ZodObject<{
         skipsReview?: boolean | null | undefined;
         rewardBoost?: number | null | undefined;
         rewardBoostMode?: "MAX" | "CUMULATIVE" | "GLOBAL" | null | undefined;
-        chain?: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Intergaze" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "Zaar" | "zkCronos" | null | undefined;
+        chain?: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Pepecoin" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "zkCronos" | null | undefined;
         lookbackWindowDays?: number | null | undefined;
         tokenAddress?: string | null | undefined;
         excludedActions?: ("tip" | "airdrop" | "raffle")[] | null | undefined;
     } | {
         type: "TOKEN_BALANCE";
-        chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Intergaze" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "Zaar" | "zkCronos";
+        chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Pepecoin" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "zkCronos";
         amountUnit: "absolute" | "dollar";
         isOptional?: boolean | null | undefined;
         isReviewRequired?: boolean | null | undefined;
@@ -3624,7 +3624,7 @@ export declare const createQuestInput: z.ZodObject<{
         type: "WALLET_INPUT";
         description: string;
         label: string;
-        chains: ("Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Intergaze" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "Zaar" | "zkCronos")[];
+        chains: ("Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Pepecoin" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "zkCronos")[];
         isOptional?: boolean | null | undefined;
         isReviewRequired?: boolean | null | undefined;
         skipsReview?: boolean | null | undefined;
@@ -3648,13 +3648,13 @@ export declare const createQuestInput: z.ZodObject<{
             amount: number;
         } | {
             type: "TOKEN";
-            chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Intergaze" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "Zaar" | "zkCronos";
+            chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Pepecoin" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "zkCronos";
             amount: number;
             tokenAddress?: string | null | undefined;
             amountUnit?: "absolute" | "dollar" | null | undefined;
         } | {
             type: "NFT";
-            chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Intergaze" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "Zaar" | "zkCronos";
+            chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Pepecoin" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "zkCronos";
             tokenId: string;
             tokenAddress?: string | null | undefined;
             amount?: number | null | undefined;
@@ -3692,7 +3692,7 @@ export declare const createQuestInput: z.ZodObject<{
             amount: number;
         } | {
             type: "TOKEN";
-            chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Intergaze" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "Zaar" | "zkCronos";
+            chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Pepecoin" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "zkCronos";
             amount: number;
             tokenAddress?: string | null | undefined;
             amountUnit?: "absolute" | "dollar" | null | undefined;
@@ -3716,7 +3716,7 @@ export declare const createQuestInput: z.ZodObject<{
         description: string;
         endpoint: string;
         userIdMethods: ("discord" | "twitter" | "wallets")[];
-        walletChains?: ("Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Intergaze" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "Zaar" | "zkCronos")[] | null | undefined;
+        walletChains?: ("Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Pepecoin" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "zkCronos")[] | null | undefined;
         isOptional?: boolean | null | undefined;
         isReviewRequired?: boolean | null | undefined;
         skipsReview?: boolean | null | undefined;
@@ -3761,7 +3761,7 @@ export declare const createQuestInput: z.ZodObject<{
         rewardBoostMode?: "MAX" | "CUMULATIVE" | "GLOBAL" | null | undefined;
     } | {
         type: "NFT_BALANCE";
-        chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Intergaze" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "Zaar" | "zkCronos";
+        chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Pepecoin" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "zkCronos";
         contractAddress: string;
         collectionName: string;
         standard: "CW_721" | "ERC-721" | "ERC-1155" | "METAPLEX" | "METAPLEX_CNFT" | "METAPLEX_CORE" | "SG_BADGE" | "UNKNOWN";
@@ -3841,7 +3841,7 @@ export declare const createQuestInput: z.ZodObject<{
         skipsReview?: boolean | null | undefined;
         rewardBoost?: number | null | undefined;
         rewardBoostMode?: "MAX" | "CUMULATIVE" | "GLOBAL" | null | undefined;
-        chain?: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Intergaze" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "Zaar" | "zkCronos" | null | undefined;
+        chain?: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Pepecoin" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "zkCronos" | null | undefined;
         lookbackWindowDays?: number | null | undefined;
         tokenAddress?: string | null | undefined;
         allowedPlatforms?: ("COWSWAP" | "FLIPSUITE" | "GAS_ZIP" | "HYPERLIQUID" | "JUPITER" | "LI_FI" | "LIQUID_SWAP" | "OBSIDIAN" | "OKU_TRADE" | "ORBITER" | "RELAY" | "ROCKETX" | "SOLANA" | "SOMNEX" | "SKIP_GO" | "SQUID" | "STARGATE" | "SUSHI_SWAP" | "WOLFSWAP" | "VVS")[] | null | undefined;
@@ -3866,13 +3866,13 @@ export declare const createQuestInput: z.ZodObject<{
         skipsReview?: boolean | null | undefined;
         rewardBoost?: number | null | undefined;
         rewardBoostMode?: "MAX" | "CUMULATIVE" | "GLOBAL" | null | undefined;
-        chain?: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Intergaze" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "Zaar" | "zkCronos" | null | undefined;
+        chain?: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Pepecoin" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "zkCronos" | null | undefined;
         lookbackWindowDays?: number | null | undefined;
         tokenAddress?: string | null | undefined;
         excludedActions?: ("tip" | "airdrop" | "raffle")[] | null | undefined;
     } | {
         type: "TOKEN_BALANCE";
-        chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Intergaze" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "Zaar" | "zkCronos";
+        chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Pepecoin" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "zkCronos";
         amountUnit: "absolute" | "dollar";
         isOptional?: boolean | null | undefined;
         isReviewRequired?: boolean | null | undefined;
@@ -3961,7 +3961,7 @@ export declare const createQuestInput: z.ZodObject<{
         type: "WALLET_INPUT";
         description: string;
         label: string;
-        chains: ("Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Intergaze" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "Zaar" | "zkCronos")[];
+        chains: ("Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Pepecoin" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "zkCronos")[];
         isOptional?: boolean | null | undefined;
         isReviewRequired?: boolean | null | undefined;
         skipsReview?: boolean | null | undefined;
@@ -3985,13 +3985,13 @@ export declare const createQuestInput: z.ZodObject<{
             amount: number;
         } | {
             type: "TOKEN";
-            chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Intergaze" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "Zaar" | "zkCronos";
+            chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Pepecoin" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "zkCronos";
             amount: number;
             tokenAddress?: string | null | undefined;
             amountUnit?: "absolute" | "dollar" | null | undefined;
         } | {
             type: "NFT";
-            chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Intergaze" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "Zaar" | "zkCronos";
+            chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Pepecoin" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "zkCronos";
             tokenId: string;
             tokenAddress?: string | null | undefined;
             amount?: number | null | undefined;
@@ -4029,7 +4029,7 @@ export declare const createQuestInput: z.ZodObject<{
             amount: number;
         } | {
             type: "TOKEN";
-            chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Intergaze" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "Zaar" | "zkCronos";
+            chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Pepecoin" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "zkCronos";
             amount: number;
             tokenAddress?: string | null | undefined;
             amountUnit?: "absolute" | "dollar" | null | undefined;
@@ -4051,7 +4051,7 @@ export declare const listQuestsShape: {
     recurrenceTypes: z.ZodOptional<z.ZodArray<z.ZodEnum<["ONCE", "DAILY", "WEEKLY", "MONTHLY", "CUSTOM"]>, "many">>;
     visibilityTypes: z.ZodOptional<z.ZodArray<z.ZodEnum<["PRIVATE", "PUBLIC", "SHARED"]>, "many">>;
     offset: z.ZodOptional<z.ZodNumber>;
-    limit: z.ZodOptional<z.ZodNumber>;
+    limit: z.ZodDefault<z.ZodNumber>;
 };
 export declare const getQuestCompletionsShape: {
     questId: z.ZodOptional<z.ZodString>;
@@ -4060,5 +4060,5 @@ export declare const getQuestCompletionsShape: {
     startTime: z.ZodOptional<z.ZodNumber>;
     endTime: z.ZodOptional<z.ZodNumber>;
     offset: z.ZodOptional<z.ZodNumber>;
-    limit: z.ZodOptional<z.ZodNumber>;
+    limit: z.ZodDefault<z.ZodNumber>;
 };

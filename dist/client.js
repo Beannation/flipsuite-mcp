@@ -99,6 +99,14 @@ export class FlipSuiteClient {
                     : String(parsed ?? res.statusText);
                 throw new FlipSuiteApiError(res.status, `FlipSuite API error ${res.status}: ${detail}`, parsed);
             }
+            // Some write endpoints (e.g. tips, transfers, burns) return an empty body
+            // on success. Returning `undefined` makes the tool layer stringify it to a
+            // non-string `content[0].text`, which violates the MCP content schema and
+            // surfaces as a -32602 error even though the action succeeded. Return a
+            // structured success value instead.
+            if (parsed === undefined) {
+                return { success: true, status: res.status };
+            }
             return parsed;
         });
     }

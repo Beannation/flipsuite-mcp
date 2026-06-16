@@ -1,6 +1,6 @@
 {
   "name": "flipsuite-mcp",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Model Context Protocol server for the FlipSuite Community API. Manage Discord community quests, points, treasury (tips/airdrops/raffles/transfers/burns), and lookups directly from Claude.",
   "license": "MIT",
   "type": "module",

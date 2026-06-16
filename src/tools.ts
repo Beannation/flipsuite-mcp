@@ -10,7 +10,7 @@ import {
 
 /** Render a successful API payload as a pretty-printed JSON text block. */
 function ok(data: unknown): CallToolResult {
-  return { content: [{ type: "text", text: JSON.stringify(data, null, 2) }] };
+  return { content: [{ type: "text", text: JSON.stringify(data ?? null, null, 2) }] };
 }
 
 /** Turn an error into a tool error result Claude can read and act on. */

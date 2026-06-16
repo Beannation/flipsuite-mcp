@@ -28,6 +28,21 @@ are marked **destructive**, and `update_points_balance` is marked as a non-idemp
 Most clients (including Claude) will surface a confirmation prompt before running a tool
 marked destructive. Always review the recipient, item, chain, and amount before approving.
 
+## Client policy: who actually executes asset moves
+
+A confirmation prompt is not a guarantee the assistant will send the transaction. Some client
+surfaces apply an additional safety policy that **prevents the assistant from initiating any
+transfer of on-chain assets, even after you confirm**:
+
+- **Claude Code** executes the five asset tools (`send_tip`, `transfer_asset`, `create_airdrop`,
+  `create_raffle`, `burn_asset`) after a confirmation prompt.
+- **Claude Cowork** declines to execute them by design; it hands the action back to you. The
+  read tools, `create_quest`, and points lookups still work conversationally.
+- You can always perform the same actions directly in the FlipSuite Discord bot or dashboard.
+
+Treat the asset tools as **you-operated**: run them from Claude Code or FlipSuite directly, and
+expect Cowork to stop short of sending. This is a property of the client, not of this server.
+
 ## Recommendations
 
 - **Start in draft / on testnets.** Create quests as `DRAFT`; rehearse treasury actions with

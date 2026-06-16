@@ -3,7 +3,9 @@ import { z } from "zod";
 /**
  * Chain keys supported by FlipSuite.
  * Mirrors the `key` enum returned by GET /v1/chains and used throughout
- * the Community API (quest tasks and rewards).
+ * the Community API (quest tasks and rewards). Synced with the live
+ * `get_supported_chains` response (2026-06-16). If FlipSuite adds or removes
+ * chains, regenerate this list from that endpoint.
  */
 export const CHAIN_KEYS = [
   "Abstract",
@@ -23,13 +25,13 @@ export const CHAIN_KEYS = [
   "HyperEvm",
   "Initia",
   "Injective",
-  "Intergaze",
   "Linea",
   "Mitosis",
   "Nano",
   "Nibiru",
   "Optimism",
   "Osmosis",
+  "Pepecoin",
   "Plasma",
   "Polygon",
   "SEDA",
@@ -42,7 +44,6 @@ export const CHAIN_KEYS = [
   "Terra",
   "Unichain",
   "Yominet",
-  "Zaar",
   "zkCronos",
 ] as const;
 

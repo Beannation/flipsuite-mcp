@@ -1,7 +1,7 @@
 import { FlipSuiteApiError } from "./client.js";
 import { getSupportedChainsShape, getUserFlipwalletsShape, getUserShape, listPointSystemsShape, getPointsBalanceShape, updatePointsBalanceShape, getTippingWalletBalanceShape, getTippingWalletInventoryShape, sendTipShape, transferAssetShape, createAirdropShape, createRaffleShape, burnAssetShape, } from "./extended-schemas.js";
 function ok(data) {
-    return { content: [{ type: "text", text: JSON.stringify(data, null, 2) }] };
+    return { content: [{ type: "text", text: JSON.stringify(data ?? null, null, 2) }] };
 }
 function fail(err) {
     let message;

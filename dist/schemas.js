@@ -434,7 +434,11 @@ export const listQuestsShape = {
         .optional()
         .describe("Quest visibility types to filter by."),
     offset: z.number().min(0).optional().describe("Pagination offset."),
-    limit: z.number().min(0).optional().describe("Maximum number of quests to return."),
+    limit: z
+        .number()
+        .min(0)
+        .default(20)
+        .describe("Maximum number of quests to return (default 20). Raise it or use offset to page through more."),
 };
 export const getQuestCompletionsShape = {
     questId: z.string().optional().describe("ID of the quest to filter completions by."),
@@ -443,6 +447,11 @@ export const getQuestCompletionsShape = {
     startTime: z.number().optional().describe("Only completions after this unix timestamp (ms)."),
     endTime: z.number().optional().describe("Only completions until this unix timestamp (ms)."),
     offset: z.number().min(0).optional().describe("Pagination offset (default 0)."),
-    limit: z.number().min(0).max(50).optional().describe("Max completions to return (default 20, max 50)."),
+    limit: z
+        .number()
+        .min(0)
+        .max(50)
+        .default(20)
+        .describe("Max completions to return (default 20, max 50)."),
 };
 //# sourceMappingURL=schemas.js.map

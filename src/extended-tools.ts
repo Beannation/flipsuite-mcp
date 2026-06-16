@@ -18,7 +18,7 @@ import {
 } from "./extended-schemas.js";
 
 function ok(data: unknown): CallToolResult {
-  return { content: [{ type: "text", text: JSON.stringify(data, null, 2) }] };
+  return { content: [{ type: "text", text: JSON.stringify(data ?? null, null, 2) }] };
 }
 
 function fail(err: unknown): CallToolResult {

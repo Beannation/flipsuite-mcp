@@ -1,7 +1,7 @@
 {
   "name": "flipsuite-mcp",
   "description": "Manage FlipSuite communities from Claude: quests, points, treasury (tips/airdrops/raffles/transfers/burns), and lookups. Local MCP server for the FlipSuite Community API.",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "author": {
     "name": "Peter Bean",
     "email": "peter@asensean.com"

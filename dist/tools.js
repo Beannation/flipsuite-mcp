@@ -2,7 +2,7 @@ import { FlipSuiteApiError } from "./client.js";
 import { createQuestShape, getQuestShape, listQuestsShape, getQuestCompletionsShape, } from "./schemas.js";
 /** Render a successful API payload as a pretty-printed JSON text block. */
 function ok(data) {
-    return { content: [{ type: "text", text: JSON.stringify(data, null, 2) }] };
+    return { content: [{ type: "text", text: JSON.stringify(data ?? null, null, 2) }] };
 }
 /** Turn an error into a tool error result Claude can read and act on. */
 function fail(err) {
