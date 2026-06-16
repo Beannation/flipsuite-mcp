@@ -38,7 +38,7 @@ for how the write/destructive tools behave.
 ## Get the code
 
 ```bash
-git clone https://github.com/beannation/flipsuite-mcp.git
+git clone https://github.com/Beannation/flipsuite-mcp.git
 cd flipsuite-mcp
 npm install
 npm run build
@@ -94,7 +94,7 @@ install it as a plugin from the Plugins settings page.
 This repo is also a single-plugin marketplace named **beannation**:
 
 ```text
-/plugin marketplace add https://github.com/beannation/flipsuite-mcp.git
+/plugin marketplace add https://github.com/Beannation/flipsuite-mcp.git
 /plugin install flipsuite-mcp@beannation
 ```
 

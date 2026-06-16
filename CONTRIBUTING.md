@@ -5,7 +5,7 @@ Thanks for your interest in improving `flipsuite-mcp`.
 ## Development setup
 
 ```bash
-git clone https://github.com/beannation/flipsuite-mcp.git
+git clone https://github.com/Beannation/flipsuite-mcp.git
 cd flipsuite-mcp
 npm install
 npm run build
