@@ -33,4 +33,17 @@ export declare class FlipSuiteClient {
     getQuest(questId: string): Promise<unknown>;
     listQuests(query: Record<string, unknown>): Promise<unknown>;
     getQuestCompletions(query: Record<string, unknown>): Promise<unknown>;
+    getSupportedChains(): Promise<unknown>;
+    getUserFlipwallets(query: Record<string, unknown>): Promise<unknown>;
+    getUser(userId: string): Promise<unknown>;
+    listPointSystems(query: Record<string, unknown>): Promise<unknown>;
+    getPointsBalance(pointSystemId: string, query: Record<string, unknown>): Promise<unknown>;
+    updatePointsBalance(pointSystemId: string, body: unknown): Promise<unknown>;
+    getTippingWalletBalance(chain: string): Promise<unknown>;
+    getTippingWalletInventory(chain: string): Promise<unknown>;
+    sendTip(body: unknown): Promise<unknown>;
+    transferAsset(body: unknown): Promise<unknown>;
+    createAirdrop(body: unknown): Promise<unknown>;
+    createRaffle(body: unknown): Promise<unknown>;
+    burnAsset(body: unknown): Promise<unknown>;
 }

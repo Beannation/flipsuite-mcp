@@ -3,6 +3,7 @@ import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { FlipSuiteClient } from "./client.js";
 import { registerQuestTools } from "./tools.js";
+import { registerExtendedTools } from "./extended-tools.js";
 async function main() {
     const apiKey = process.env.FLIPSUITE_API_KEY;
     if (!apiKey) {
@@ -17,9 +18,10 @@ async function main() {
     });
     const server = new McpServer({
         name: "flipsuite-mcp",
-        version: "0.1.0",
+        version: "0.2.0",
     });
     registerQuestTools(server, client);
+    registerExtendedTools(server, client);
     const transport = new StdioServerTransport();
     await server.connect(transport);
     console.error("[flipsuite-mcp] FlipSuite MCP server running on stdio.");

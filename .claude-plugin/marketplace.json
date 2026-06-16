@@ -11,8 +11,8 @@
     {
       "name": "flipsuite-mcp",
       "source": "./",
-      "description": "Create and read FlipSuite community quests from Claude.",
-      "version": "0.1.0"
+      "description": "Manage FlipSuite communities from Claude: quests, points, treasury, and lookups.",
+      "version": "0.2.0"
     }
   ]
 }

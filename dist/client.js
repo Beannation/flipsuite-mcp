@@ -114,5 +114,65 @@ export class FlipSuiteClient {
     getQuestCompletions(query) {
         return this.request({ method: "GET", path: "/v1/community/quest-completions", query });
     }
+    // --- Core ---
+    getSupportedChains() {
+        return this.request({ method: "GET", path: "/v1/chains" });
+    }
+    getUserFlipwallets(query) {
+        return this.request({ method: "GET", path: "/v1/flipwallets", query });
+    }
+    // --- Gating ---
+    getUser(userId) {
+        return this.request({
+            method: "GET",
+            path: `/v1/community/gating/users/${encodeURIComponent(userId)}`,
+        });
+    }
+    // --- Points ---
+    listPointSystems(query) {
+        return this.request({ method: "GET", path: "/v1/community/points", query });
+    }
+    getPointsBalance(pointSystemId, query) {
+        return this.request({
+            method: "GET",
+            path: `/v1/community/points/${encodeURIComponent(pointSystemId)}/balance`,
+            query,
+        });
+    }
+    updatePointsBalance(pointSystemId, body) {
+        return this.request({
+            method: "POST",
+            path: `/v1/community/points/${encodeURIComponent(pointSystemId)}/balance`,
+            body,
+        });
+    }
+    // --- Treasury (tipping) ---
+    getTippingWalletBalance(chain) {
+        return this.request({
+            method: "GET",
+            path: `/v1/community/tipping/wallets/${encodeURIComponent(chain)}/balance`,
+        });
+    }
+    getTippingWalletInventory(chain) {
+        return this.request({
+            method: "GET",
+            path: `/v1/community/tipping/wallets/${encodeURIComponent(chain)}/inventory`,
+        });
+    }
+    sendTip(body) {
+        return this.request({ method: "POST", path: "/v1/community/tipping/tips", body });
+    }
+    transferAsset(body) {
+        return this.request({ method: "POST", path: "/v1/community/tipping/transfers", body });
+    }
+    createAirdrop(body) {
+        return this.request({ method: "POST", path: "/v1/community/tipping/airdrops", body });
+    }
+    createRaffle(body) {
+        return this.request({ method: "POST", path: "/v1/community/tipping/raffles", body });
+    }
+    burnAsset(body) {
+        return this.request({ method: "POST", path: "/v1/community/tipping/burning", body });
+    }
 }
 //# sourceMappingURL=client.js.map

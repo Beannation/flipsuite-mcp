@@ -785,6 +785,70 @@ export declare const QuestTask: z.ZodDiscriminatedUnion<"type", [z.ZodObject<{
     rewardBoost?: number | null | undefined;
     rewardBoostMode?: "MAX" | "CUMULATIVE" | "GLOBAL" | null | undefined;
 }>]>;
+export declare const pointsItem: z.ZodObject<{
+    type: z.ZodLiteral<"POINTS">;
+    pointSystemId: z.ZodString;
+    amount: z.ZodNumber;
+}, "strip", z.ZodTypeAny, {
+    type: "POINTS";
+    pointSystemId: string;
+    amount: number;
+}, {
+    type: "POINTS";
+    pointSystemId: string;
+    amount: number;
+}>;
+export declare const tokenItem: z.ZodObject<{
+    type: z.ZodLiteral<"TOKEN">;
+    chain: z.ZodEnum<["Abstract", "ApeChain", "Arbitrum", "Atto", "Avalanche", "Base", "Berachain", "Blast", "BSC", "CosmosHub", "Cronos", "Ethereum", "Harmony", "HyperCore", "HyperEvm", "Initia", "Injective", "Intergaze", "Linea", "Mitosis", "Nano", "Nibiru", "Optimism", "Osmosis", "Plasma", "Polygon", "SEDA", "Sei", "SeiEvm", "Solana", "Somnia", "Sonic", "Stargaze", "Terra", "Unichain", "Yominet", "Zaar", "zkCronos"]>;
+    tokenAddress: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+    amount: z.ZodNumber;
+    amountUnit: z.ZodOptional<z.ZodNullable<z.ZodEnum<["absolute", "dollar"]>>>;
+}, "strip", z.ZodTypeAny, {
+    type: "TOKEN";
+    chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Intergaze" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "Zaar" | "zkCronos";
+    amount: number;
+    tokenAddress?: string | null | undefined;
+    amountUnit?: "absolute" | "dollar" | null | undefined;
+}, {
+    type: "TOKEN";
+    chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Intergaze" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "Zaar" | "zkCronos";
+    amount: number;
+    tokenAddress?: string | null | undefined;
+    amountUnit?: "absolute" | "dollar" | null | undefined;
+}>;
+export declare const nftItem: z.ZodObject<{
+    type: z.ZodLiteral<"NFT">;
+    chain: z.ZodEnum<["Abstract", "ApeChain", "Arbitrum", "Atto", "Avalanche", "Base", "Berachain", "Blast", "BSC", "CosmosHub", "Cronos", "Ethereum", "Harmony", "HyperCore", "HyperEvm", "Initia", "Injective", "Intergaze", "Linea", "Mitosis", "Nano", "Nibiru", "Optimism", "Osmosis", "Plasma", "Polygon", "SEDA", "Sei", "SeiEvm", "Solana", "Somnia", "Sonic", "Stargaze", "Terra", "Unichain", "Yominet", "Zaar", "zkCronos"]>;
+    tokenAddress: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+    tokenId: z.ZodString;
+    amount: z.ZodOptional<z.ZodNullable<z.ZodNumber>>;
+}, "strip", z.ZodTypeAny, {
+    type: "NFT";
+    chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Intergaze" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "Zaar" | "zkCronos";
+    tokenId: string;
+    tokenAddress?: string | null | undefined;
+    amount?: number | null | undefined;
+}, {
+    type: "NFT";
+    chain: "Abstract" | "ApeChain" | "Arbitrum" | "Atto" | "Avalanche" | "Base" | "Berachain" | "Blast" | "BSC" | "CosmosHub" | "Cronos" | "Ethereum" | "Harmony" | "HyperCore" | "HyperEvm" | "Initia" | "Injective" | "Intergaze" | "Linea" | "Mitosis" | "Nano" | "Nibiru" | "Optimism" | "Osmosis" | "Plasma" | "Polygon" | "SEDA" | "Sei" | "SeiEvm" | "Solana" | "Somnia" | "Sonic" | "Stargaze" | "Terra" | "Unichain" | "Yominet" | "Zaar" | "zkCronos";
+    tokenId: string;
+    tokenAddress?: string | null | undefined;
+    amount?: number | null | undefined;
+}>;
+export declare const roleItem: z.ZodObject<{
+    type: z.ZodLiteral<"ROLE">;
+    roleId: z.ZodString;
+    duration: z.ZodOptional<z.ZodNullable<z.ZodNumber>>;
+}, "strip", z.ZodTypeAny, {
+    type: "ROLE";
+    roleId: string;
+    duration?: number | null | undefined;
+}, {
+    type: "ROLE";
+    roleId: string;
+    duration?: number | null | undefined;
+}>;
 export declare const QuestReward: z.ZodDiscriminatedUnion<"type", [z.ZodObject<{
     type: z.ZodLiteral<"FIXED">;
     strategy: z.ZodDiscriminatedUnion<"type", [z.ZodObject<{

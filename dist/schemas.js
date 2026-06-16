@@ -325,12 +325,15 @@ const rewardStrategy = z.discriminatedUnion("type", [
         maxWinners: z.number().int().min(1).describe("Number of random winners to pick."),
     }),
 ]);
-const pointsRewardItem = z.object({
+// Reusable asset item schemas. These are shared by quest rewards and by the
+// tipping/treasury tools (tips, airdrops, raffles, transfers, burns), so they
+// are exported.
+export const pointsItem = z.object({
     type: z.literal("POINTS"),
     pointSystemId: uuidLike.describe("Point system ID."),
     amount: z.number().gt(0).describe("Points amount."),
 });
-const tokenRewardItem = z.object({
+export const tokenItem = z.object({
     type: z.literal("TOKEN"),
     chain: ChainKey,
     tokenAddress: z
@@ -342,14 +345,14 @@ const tokenRewardItem = z.object({
     amount: z.number().gt(0).describe("Token amount."),
     amountUnit: amountUnit.nullable().optional(),
 });
-const nftRewardItem = z.object({
+export const nftItem = z.object({
     type: z.literal("NFT"),
     chain: ChainKey,
     tokenAddress: z.string().max(256).nullable().optional().describe("Token address of the NFT. Leave blank on Solana."),
     tokenId: z.string().max(256).describe("ID of the NFT."),
     amount: z.number().int().min(1).nullable().optional().describe("NFT amount (ERC-1155 only)."),
 });
-const roleRewardItem = z.object({
+export const roleItem = z.object({
     type: z.literal("ROLE"),
     roleId: z.string().regex(/^\d+$/).describe("ID of a Discord role to grant."),
     duration: z
@@ -361,8 +364,8 @@ const roleRewardItem = z.object({
         .optional()
         .describe("Milliseconds after which the role is revoked (max 3 years). Unset = permanent."),
 });
-const fixedRewardItem = z.union([pointsRewardItem, tokenRewardItem, nftRewardItem, roleRewardItem]);
-const sharedRewardItem = z.union([pointsRewardItem, tokenRewardItem]);
+const fixedRewardItem = z.union([pointsItem, tokenItem, nftItem, roleItem]);
+const sharedRewardItem = z.union([pointsItem, tokenItem]);
 export const QuestReward = z.discriminatedUnion("type", [
     z.object({
         type: z.literal("FIXED"),

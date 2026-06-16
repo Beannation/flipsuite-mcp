@@ -26,6 +26,30 @@ raffle distribution strategies.
 > endpoint, so editing an existing quest is not supported. This server can create
 > and read quests only.
 
+### Points, treasury, and lookups
+
+| Tool | Type | Description |
+|------|------|-------------|
+| `list_point_systems` | read | List your community's point systems (find a point system ID). |
+| `get_points_balance` | read | Point balances for users / top holders in a point system. |
+| `update_points_balance` | **write** | Credit or debit point balances for one or more users. |
+| `get_tipping_wallet_balance` | read | Shared tipping wallet token balances on a chain. |
+| `get_tipping_wallet_inventory` | read | NFTs held in the shared tipping wallet on a chain. |
+| `send_tip` | **write** ⚠️ | Send points/token/NFT from the tipping wallet to a user. |
+| `transfer_asset` | **write** ⚠️ | Send a token/NFT to an arbitrary wallet address. |
+| `create_airdrop` | **write** ⚠️ | Timed airdrop of points or a token in a channel. |
+| `create_raffle` | **write** ⚠️ | Timed raffle of points/token/NFT/role in a channel. |
+| `burn_asset` | **write** ⚠️ | Permanently burn a token/NFT in the tipping wallet. |
+| `get_user` | read | Details of a verified user (Discord + linked accounts/wallets). Growth plan. |
+| `get_user_flipwallets` | read | A user's per-chain Flipwallet addresses. |
+| `get_supported_chains` | read | Chains FlipSuite supports, with chain keys and network IDs. |
+
+> ⚠️ **Treasury writes move real on-chain assets and are irreversible.** The
+> tools marked ⚠️ (and `burn_asset`, which destroys assets) carry destructive
+> safety annotations so clients can prompt before running them. Confirm
+> recipient, item, and amount before invoking. `update_points_balance` also
+> permanently changes user balances.
+
 ## Install as a plugin (Cowork & Claude Code)
 
 This repo is also a self-contained Claude **plugin** (and a single-plugin
