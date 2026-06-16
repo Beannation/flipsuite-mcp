@@ -1,0 +1,41 @@
+{
+  "name": "flipsuite-mcp",
+  "version": "0.1.0",
+  "description": "Model Context Protocol server for the FlipSuite Community API. Create and read Discord community quests directly from Claude.",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "flipsuite-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "PRIVACY.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "start": "node dist/index.js",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "flipsuite",
+    "discord",
+    "quests",
+    "claude"
+  ],
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "zod": "^3.25.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.0",
+    "@types/node": "^22.0.0"
+  }
+}
