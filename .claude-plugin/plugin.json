@@ -1,0 +1,10 @@
+{
+  "name": "flipsuite-mcp",
+  "description": "Create and read FlipSuite community quests from Claude. Local MCP server for the FlipSuite Community API.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Peter Bean",
+    "email": "peter@asensean.com"
+  },
+  "license": "MIT"
+}

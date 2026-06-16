@@ -26,6 +26,31 @@ raffle distribution strategies.
 > endpoint, so editing an existing quest is not supported. This server can create
 > and read quests only.
 
+## Install as a plugin (Cowork & Claude Code)
+
+This repo is also a self-contained Claude **plugin** (and a single-plugin
+marketplace named `beannation`), so it can be installed in Claude Cowork and
+Claude Code without npm or any hosting. The compiled `dist/` is committed, so the
+plugin runs straight from a checkout.
+
+**Claude Code:**
+
+```bash
+# point at this repo (local path or your beannation GitHub repo)
+/plugin marketplace add /path/to/flipsuite-mcp
+/plugin install flipsuite-mcp@beannation
+```
+
+**Cowork:** open the plugins/marketplace UI, add the `beannation` marketplace
+(local path or git URL), then install **flipsuite-mcp**.
+
+The plugin declares its server in `.mcp.json` and reads your key from the
+`FLIPSUITE_API_KEY` environment variable. Make sure that variable is set in the
+environment Claude launches the plugin from.
+
+> Connectors vs. plugins: Cowork's "custom connector" screen is for *remote*
+> servers reached by URL. This local server is installed as a *plugin* instead.
+
 ## Requirements
 
 - Node.js 18 or newer

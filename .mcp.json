@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "flipsuite": {
+      "command": "node",
+      "args": ["${CLAUDE_PLUGIN_ROOT}/dist/index.js"],
+      "env": {
+        "FLIPSUITE_API_KEY": "${FLIPSUITE_API_KEY}"
+      }
+    }
+  }
+}

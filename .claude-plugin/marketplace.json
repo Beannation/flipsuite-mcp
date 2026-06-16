@@ -1,0 +1,18 @@
+{
+  "name": "beannation",
+  "metadata": {
+    "description": "Peter Bean's personal plugin marketplace."
+  },
+  "owner": {
+    "name": "Peter Bean",
+    "email": "peter@asensean.com"
+  },
+  "plugins": [
+    {
+      "name": "flipsuite-mcp",
+      "source": "./",
+      "description": "Create and read FlipSuite community quests from Claude.",
+      "version": "0.1.0"
+    }
+  ]
+}
