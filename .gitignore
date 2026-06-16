@@ -1,5 +1,8 @@
 node_modules/
 *.log
+
+# Private project handoff — never publish to the repo
+HANDOFF.md
 .env
 .env.local
 .DS_Store

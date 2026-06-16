@@ -1,152 +1,147 @@
 # flipsuite-mcp
 
-A [Model Context Protocol](https://modelcontextprotocol.io) (MCP) server for the
-**FlipSuite Community API**. It lets an MCP client such as Claude create and read
-quests in your FlipSuite Discord community.
+A local [Model Context Protocol](https://modelcontextprotocol.io) (MCP) server for the
+**FlipSuite Community API**. It lets an MCP client such as Claude manage your FlipSuite
+Discord community — quests, points, treasury, and lookups — in plain language.
 
-This is a local (stdio) server: it runs on your own machine and authenticates
-with your own FlipSuite Community API key. No hosting and no OAuth required.
+The server runs on your own machine and authenticates with your own FlipSuite Community
+API key. No hosting and no OAuth required.
 
-## Tools
+- **17 tools** covering the full FlipSuite Community API
+- Works in **Claude Code**, **Claude Desktop**, and **Claude Cowork** (as a local MCP server or plugin)
+- Faithful, fully-typed input schemas (including the complete quest model)
+- Built-in 1 request/second rate limiting and clear error messages
+- Destructive actions (asset transfers, burns, balance changes) carry safety annotations
 
-| Tool | Type | Description |
-|------|------|-------------|
-| `create_quest` | write | Create a quest with tasks (requirements) and rewards. Created `ACTIVE` by default; pass `status: "DRAFT"` to keep it unpublished. |
-| `get_quest` | read | Fetch a single quest by ID. |
-| `list_quests` | read | List quests, with optional filters (status, recurrence, visibility) and `offset`/`limit` pagination. |
-| `get_quest_completions` | read | Retrieve quest completion records, filtered by quest, round, user, or time range. |
+## What it can do
 
-`create_quest` models the full FlipSuite quest schema: up to 32 tasks across all
-22 task types (Discord roles, NFT/token/points balance, token swap, the X/Twitter
-checks, file/text/numeric/poll/wallet inputs, and custom API tasks) and up to 4
-rewards (points, tokens, NFTs, or Discord roles) with everyone / first-come /
-raffle distribution strategies.
+| Area | Tools |
+|------|-------|
+| **Quests** | `create_quest`, `get_quest`, `list_quests`, `get_quest_completions` |
+| **Points** | `list_point_systems`, `get_points_balance`, `update_points_balance` |
+| **Treasury (tipping)** | `get_tipping_wallet_balance`, `get_tipping_wallet_inventory`, `send_tip`, `transfer_asset`, `create_airdrop`, `create_raffle`, `burn_asset` |
+| **Lookups** | `get_user`, `get_user_flipwallets`, `get_supported_chains` |
 
-> **Note:** The FlipSuite API does not currently expose an "update quest"
-> endpoint, so editing an existing quest is not supported. This server can create
-> and read quests only.
+See **[docs/TOOLS.md](docs/TOOLS.md)** for the full reference and **[docs/SAFETY.md](docs/SAFETY.md)**
+for how the write/destructive tools behave.
 
-### Points, treasury, and lookups
-
-| Tool | Type | Description |
-|------|------|-------------|
-| `list_point_systems` | read | List your community's point systems (find a point system ID). |
-| `get_points_balance` | read | Point balances for users / top holders in a point system. |
-| `update_points_balance` | **write** | Credit or debit point balances for one or more users. |
-| `get_tipping_wallet_balance` | read | Shared tipping wallet token balances on a chain. |
-| `get_tipping_wallet_inventory` | read | NFTs held in the shared tipping wallet on a chain. |
-| `send_tip` | **write** ⚠️ | Send points/token/NFT from the tipping wallet to a user. |
-| `transfer_asset` | **write** ⚠️ | Send a token/NFT to an arbitrary wallet address. |
-| `create_airdrop` | **write** ⚠️ | Timed airdrop of points or a token in a channel. |
-| `create_raffle` | **write** ⚠️ | Timed raffle of points/token/NFT/role in a channel. |
-| `burn_asset` | **write** ⚠️ | Permanently burn a token/NFT in the tipping wallet. |
-| `get_user` | read | Details of a verified user (Discord + linked accounts/wallets). Growth plan. |
-| `get_user_flipwallets` | read | A user's per-chain Flipwallet addresses. |
-| `get_supported_chains` | read | Chains FlipSuite supports, with chain keys and network IDs. |
-
-> ⚠️ **Treasury writes move real on-chain assets and are irreversible.** The
-> tools marked ⚠️ (and `burn_asset`, which destroys assets) carry destructive
-> safety annotations so clients can prompt before running them. Confirm
-> recipient, item, and amount before invoking. `update_points_balance` also
-> permanently changes user balances.
-
-## Install as a plugin (Cowork & Claude Code)
-
-This repo is also a self-contained Claude **plugin** (and a single-plugin
-marketplace named `beannation`), so it can be installed in Claude Cowork and
-Claude Code without npm or any hosting. The compiled `dist/` is committed, so the
-plugin runs straight from a checkout.
-
-**Claude Code:**
-
-```bash
-# point at this repo (local path or your beannation GitHub repo)
-/plugin marketplace add /path/to/flipsuite-mcp
-/plugin install flipsuite-mcp@beannation
-```
-
-**Cowork:** open the plugins/marketplace UI, add the `beannation` marketplace
-(local path or git URL), then install **flipsuite-mcp**.
-
-The plugin declares its server in `.mcp.json` and reads your key from the
-`FLIPSUITE_API_KEY` environment variable. Make sure that variable is set in the
-environment Claude launches the plugin from.
-
-> Connectors vs. plugins: Cowork's "custom connector" screen is for *remote*
-> servers reached by URL. This local server is installed as a *plugin* instead.
+> **Note:** FlipSuite has no "update quest" endpoint, so quests can be created and read but
+> not edited. Treasury writes (`send_tip`, `transfer_asset`, `create_airdrop`, `create_raffle`,
+> `burn_asset`) and `update_points_balance` change real assets/balances — read the safety doc.
 
 ## Requirements
 
-- Node.js 18 or newer
-- A FlipSuite **Community API key**. Generate one in the
-  [FlipSuite dashboard](https://flipsuite.xyz) under the **Developer** tab.
+- **Node.js 18+** ([nodejs.org](https://nodejs.org) — install the LTS build)
+- A FlipSuite **Community API key** — generate one in the [FlipSuite dashboard](https://flipsuite.xyz)
+  under the **Developer** tab.
+
+## Get the code
+
+```bash
+git clone https://github.com/beannation/flipsuite-mcp.git
+cd flipsuite-mcp
+npm install
+npm run build
+```
+
+The repo ships with a prebuilt `dist/`, so the plugin install paths below work even without
+running the build yourself.
 
 ## Install
 
-```bash
-npm install -g flipsuite-mcp
-```
+The server reads your key from the `FLIPSUITE_API_KEY` environment variable in every case.
 
-Or run without installing:
+### Claude Code
 
 ```bash
-npx flipsuite-mcp
+claude mcp add flipsuite -s user -t stdio \
+  -e FLIPSUITE_API_KEY=YOUR_KEY \
+  -- node "/absolute/path/to/flipsuite-mcp/dist/index.js"
 ```
 
-## Configure your MCP client
-
-The server reads your API key from the `FLIPSUITE_API_KEY` environment variable.
+`-s user` makes it available in every project. Confirm with `claude mcp list`, then ask
+Claude: *"Use get_supported_chains to list FlipSuite's chains."*
 
 ### Claude Desktop
 
-Add to your `claude_desktop_config.json`:
+Edit `claude_desktop_config.json` (macOS: `~/Library/Application Support/Claude/`):
 
 ```json
 {
   "mcpServers": {
     "flipsuite": {
-      "command": "npx",
-      "args": ["-y", "flipsuite-mcp"],
-      "env": {
-        "FLIPSUITE_API_KEY": "your-community-api-key"
-      }
+      "command": "node",
+      "args": ["/absolute/path/to/flipsuite-mcp/dist/index.js"],
+      "env": { "FLIPSUITE_API_KEY": "YOUR_KEY" }
     }
   }
 }
 ```
 
-### Claude Code
+Fully quit and relaunch Claude Desktop afterwards.
 
-```bash
-claude mcp add flipsuite --env FLIPSUITE_API_KEY=your-community-api-key -- npx -y flipsuite-mcp
+### Claude Cowork
+
+Either **Settings → Developer → add a local MCP server** (command `node`, argument the
+absolute path to `dist/index.js`, env var `FLIPSUITE_API_KEY`), then start a new chat — or
+install it as a plugin from the Plugins settings page.
+
+> On managed/work accounts an admin may have disabled user-added local MCP servers. If you
+> can't add one, use a personal account or ask your admin to deploy it as an organization plugin.
+
+### As a plugin (Cowork & Claude Code)
+
+This repo is also a single-plugin marketplace named **beannation**:
+
+```text
+/plugin marketplace add https://github.com/beannation/flipsuite-mcp.git
+/plugin install flipsuite-mcp@beannation
 ```
+
+The plugin reads `FLIPSUITE_API_KEY` from the environment Claude launches it from.
 
 ### Environment variables
 
 | Variable | Required | Description |
 |----------|----------|-------------|
 | `FLIPSUITE_API_KEY` | yes | Your FlipSuite Community API key. |
-| `FLIPSUITE_API_BASE_URL` | no | Override the API base URL (defaults to `https://api.flipsuite.xyz`). |
+| `FLIPSUITE_API_BASE_URL` | no | Override the API base URL (default `https://api.flipsuite.xyz`). |
+
+## Example prompts
+
+- "List my FlipSuite point systems."
+- "Create a draft quest called 'Welcome' that requires following @flipsuitexyz on X, rewarding 100 XP to everyone."
+- "Show the top 10 holders of point system &lt;id&gt;."
+- "What tokens are in our tipping wallet on Base?"
 
 ## Develop
 
 ```bash
 npm install
 npm run build      # compile TypeScript to dist/
+npm run watch      # rebuild on change
 npm start          # run the compiled server (needs FLIPSUITE_API_KEY)
 ```
 
+Project layout: `src/client.ts` (transport-agnostic API client), `src/schemas.ts` +
+`src/extended-schemas.ts` (Zod input schemas), `src/tools.ts` + `src/extended-tools.ts`
+(tool registrations), `src/index.ts` (stdio entry point).
+
 ## Notes & limits
 
-- The FlipSuite Community API is rate limited to **1 request per second**. This
-  server serializes and throttles its requests to stay within that limit.
-- All endpoints require a valid Community API key sent via the `x-api-key` header.
+- The FlipSuite Community API is rate limited to **1 request/second**; the server throttles to match.
+- All Community API endpoints require a valid key via the `x-api-key` header.
+- `get_user` requires the FlipSuite Growth plan.
 
 ## Privacy
 
-See [PRIVACY.md](./PRIVACY.md). In short: this server runs locally, stores
-nothing, and sends requests only to the FlipSuite API using the key you provide.
+See [PRIVACY.md](PRIVACY.md). The server runs locally, stores nothing, and talks only to the
+FlipSuite API using the key you provide.
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## License
 
-MIT — see [LICENSE](./LICENSE).
+MIT — see [LICENSE](LICENSE).
